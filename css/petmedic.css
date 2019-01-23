@@ -2,6 +2,12 @@
 .nav-link {
     padding: 0 !important;
 }
+.btn-default{
+    background-color: #303030;
+    color: #fff;
+    font-family: 'helvetica-bold';
+    border-radius: 0;
+}
 
 @media (min-width: 1200px) {
     .container {
@@ -14,15 +20,17 @@
     font-family: 'helvetica-roman';
     src: url(../fonts/HelveticaLTStd-Roman.otf);
 }
-
 @font-face {
     font-family: 'helvetica-light';
     src: url(../fonts/HelveticaLTStd-Light.otf);
 }
-
 @font-face {
     font-family: 'helvetica-bold';
     src: url(../fonts/HelveticaLTStd-Bold.otf);
+}
+@font-face {
+    font-family: 'gothic';
+    src: url(../fonts/GOTHIC.otf);
 }
 
 
@@ -333,3 +341,49 @@
     color: #f6f6f6;
     text-align: center;
 }
+
+/*****  CONTACTENOS  ******/
+#contactenos {
+    margin-top: 105px;
+    padding-top: 60px;
+    padding-bottom: 110px;
+}
+#contactenos .fieldset{
+    font-family: helvetica-roman;
+    color: #333333;
+}
+#contactenos .menu h1 { font-family: 'helvetica-bold'; font-size: 40px;color: #333333; margin-bottom: 30px;}
+#contactenos .menu ul { padding: 0; list-style-type: none; }
+#contactenos .menu ul li { font-family: 'helvetica-roman'; font-size: 14px; color: #868686; margin-left: 23px;margin-bottom: 15px;}
+#contactenos .mapa {
+    padding-top: 23px;
+}
+/*#contactenos .mapa img { width: 95%;}*/
+#contactenos .icon_direc{
+    list-style-image: url('../img/icon-contact-direc.png');
+    list-style-position: inside;
+}
+#contactenos .icon_direc .text { margin-left: 10px; }
+#contactenos .icon_email{
+    list-style-image: url('../img/icon-contact-email.png');
+    list-style-position: inside;
+}
+#contactenos .icon_email .text { margin-left: 6px; }
+#contactenos .icon_telef{
+    list-style-image: url('../img/icon-contact-telf.png');
+    list-style-position: inside;
+}
+#contactenos .icon_telef .text { margin-left: 6px; }
+#contactenos .btn-submit{ width: 312px; height: 40px; font-size: 18px;margin-top: 50px; margin-left: 115px;}
+#contactenos .btn-submit:hover{ color: #9c8967}
+#contactenos input.form-control,#contactenos textarea.form-control{ border: 1px solid #d8d8d8; border-radius: 0; color: #9c9c9c;font-size:14px;font-family: 'gothic'}
+#contactenos input.form-control::placeholder,#contactenos textarea.form-control::placeholder{ color: #b7b7b7;}
+.checkboxes{ padding-left: 20px;}
+.customcheck{display:block;position:relative;padding-left:35px;margin-bottom:12px;cursor:pointer;font-family:'helvetica-roman';font-size:.8rem;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+.customcheck input{position:absolute;opacity:0;cursor:pointer}
+.checkmark{position:absolute;top:0;left:0;height:20px;width:20px;background-color:#fff;border:1px solid #bea373}
+.customcheck:hover input ~ .checkmark{background-color:#f3f2f0}
+.customcheck input:checked ~ .checkmark{background-color:#bea373}
+.checkmark:after{content:"";position:absolute;display:none}
+.customcheck input:checked ~ .checkmark:after{display:block}
+.customcheck .checkmark:after{left:7px;top:3px;width:5px;height:10px;border:solid #fff;border-width:0 3px 3px 0;-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}
