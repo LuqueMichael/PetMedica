@@ -1,0 +1,302 @@
+/* RESET DEFAULT SETTING BOOTSTRAP */
+.nav-link {
+    padding: 0 !important;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1150px;
+    }
+}
+
+/* IMPORR FONTS */
+@font-face {
+    font-family: 'helvetica-roman';
+    src: url(../fonts/HelveticaLTStd-Roman.otf);
+}
+
+@font-face {
+    font-family: 'helvetica-light';
+    src: url(../fonts/HelveticaLTStd-Light.otf);
+}
+
+@font-face {
+    font-family: 'helvetica-bold';
+    src: url(../fonts/HelveticaLTStd-Bold.otf);
+}
+
+
+/* HEADER NAVBAR */
+#navbar-principal {
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+#navbar-principal .container {
+    padding: 0;
+}
+
+#navbar-principal.large {
+    height: 106px !important;
+}
+#navbar-principal.large ul li.nav-item {
+    margin-top: 52px;
+}
+
+#navbar-principal.small {
+    height: 83px !important;
+}
+/*#navbar-principal.small .navbar-logo img { width: 180px; height: 47px;  padding-top: 15px; }*/
+#navbar-principal.small ul li.nav-item {
+    margin-top: 30px;
+}
+
+#navbar-principal , a, img, li{
+    transition: all 0.3s;
+    -moz-transition: all 0.3s; /* Firefox 4 */
+    -webkit-transition: all 0.3s; /* Safari and Chrome */
+    -o-transition: all 0.3s; /* Opera */
+}
+
+/*#navbar-principal .navbar-logo img {
+    padding-top: 28px;
+}*/
+#navbar-principal ul li.nav-item {
+    padding-left: 21px;
+    padding-bottom: 30px;
+    font-size: 15.4px;
+    display: flex;
+    align-items: center;
+}
+
+#navbar-principal ul li a.nav-link {
+    font-family: helvetica-roman;
+    color: #76777a;
+    text-decoration: none;
+    letter-spacing: 0.1px;
+    position: relative;
+}
+
+#navbar-principal ul li a.nav-link:hover {
+    color: #9c8967;
+    transition: .3s;
+}
+
+#navbar-principal ul li a.nav-link:before {
+    content: ' ';
+    position: absolute;
+    top: 23px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #9c8967;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .5s;
+    line-height: normal;
+
+}
+
+#navbar-principal ul li a.nav-link:hover:before {
+    transform: scaleX(1);
+    transform-origin: left;
+    color: #9c8967;
+}
+
+
+#submenu-productos-contenedor {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    margin-top: 30px;
+    background-color: #f5f5f5;
+    left: 0;   
+    top: 3rem;
+    display: none;
+    padding-bottom: 60px;
+}
+#submenu-productos-contenedor h1 {
+    font-family: helvetica-roman;
+    font-size: 16px;
+    color: #76777a;
+    text-decoration: none;
+    letter-spacing: 0.1px;
+    padding-top: 50px;
+}
+#submenu-productos-contenedor ul{ list-style-type: none; border-left: 1px solid #bdbebe; }
+#submenu-productos-contenedor ul li{
+    font-family: 'helvetica-light';
+    font-size: 13px;
+    color: #333333;
+    letter-spacing: 0.1px;
+    line-height: 30px;
+    transition: .3s;
+    transform-origin: top;
+}
+#submenu-productos-contenedor ul li a.nav-link{ display: initial;font-family: 'helvetica-light';}
+#submenu-productos-contenedor ul li a.nav-link:before{ top: 19px !important}
+
+#submenu-productos-contenedor ul .iconos li:first-child{padding-top: 23px;}
+#submenu-productos-contenedor ul .iconos li:last-child{padding-top: 10px;}
+
+
+
+.show{ /* SHOW SUBMENU CONTENT */
+	display:inline-block !important;
+	z-index: 1;
+	transition: .3s;
+}
+
+#icon-agrovet {
+    background-image: url('../img/icon_menu/icon-agrovet.png');
+    width: 23px;
+    height: 23px;
+}
+
+#icon-agrovet:hover {
+    background-image: url('../img/icon_menu/icon-agrovet-h.png');
+}
+
+#icon-facebook {
+    background-image: url('../img/icon_menu/icon-facebook.png');
+    width: 11px;
+    height: 17px;
+}
+
+#icon-facebook:hover {
+    background-image: url('../img/icon_menu/icon-facebook-h.png');
+}
+
+#icon-youtube {
+    background-image: url('../img/icon_menu/icon-youtube.png');
+    width: 21px;
+    height: 17px;
+}
+
+#icon-youtube:hover {
+    background-image: url('../img/icon_menu/icon-youtube-h.png');
+}
+
+#icon-ingles {
+    background-image: url('../img/icon_menu/icon-ingles.png');
+    width: 30px;
+    height: 21px;
+}
+
+#icon-ingles:hover {
+    background-image: url('../img/icon_menu/icon-ingles-h.png');
+}
+
+/* FOOTER */
+
+#footer {
+    background-color: #333333;
+    position: relative;
+}
+
+#footer .container {
+    width: 1150px;
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 175PX;
+}
+
+#footer .logo-footer {
+    width: 190px;
+    height: 50px;
+    padding-right: 10%;
+    padding-bottom: 50px;
+    float: left;
+}
+
+#footer h1 {
+    font-family: helvetica-roman;
+    font-size: 14px;
+    padding-bottom: 10px;
+    color: #bea373;
+    margin: 0;
+}
+
+#footer ul {
+    list-style-type: none;
+}
+
+#footer ul li,
+#footer ul li a {
+    font-family: helvetica-roman;
+    font-size: 12px;
+    color: #d4d4d4;
+    padding-top: 0px;
+    line-height: 22px;
+    vertical-align: middle;
+    text-decoration: none;
+    position: relative;
+}
+
+#footer ul li a:hover {
+    color: #fff;
+    transition: linear .5s color;
+}
+
+#footer ul li a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -3px;
+    left: 0;
+    background-color: #796940;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.5s cubic-bezier(1, 0.25, 0, 0.75) 0s;
+    transition: all 0.5s cubic-bezier(1, 0.25, 0, 0.75) 0s;
+}
+
+#footer ul li a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+#footer ul li::first-letter {
+    margin-right: 5px;
+    font-size: 10px;
+}
+
+#footer .redesfooter li {
+    display: inline-flex;
+    padding-right: 8px;
+    padding-bottom: 20px;
+}
+
+#footer .icon_direc {
+    list-style-image: url('../img/icon_footer/icon-direc.png');
+    list-style-position: inside;
+}
+
+#footer .icon_mail {
+    list-style-image: url('../img/icon_footer/icon-mail.png');
+    list-style-position: inside;
+}
+
+#footer .icon_fono {
+    list-style-image: url('../img/icon_footer/icon-fono.png');
+    list-style-position: inside;
+}
+
+#Copyright {
+    width: 100%;
+    height: 80px;
+    background-color: #222221;
+    padding-top: 0;
+}
+
+#Copyright p {
+    font-family: helvetica-roman;
+    font-size: 12px;
+    color: #f6f6f6;
+    text-align: center;
+}
