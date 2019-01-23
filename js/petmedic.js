@@ -11,10 +11,19 @@ $(function(){
 
     //SHOW SUBMENU PRODUCTS
     $('#submenu-productos').on('mouseover',function(){
+        $('#submenu-petmedicapro-contenedor').removeClass('show');
         $('#submenu-productos-contenedor').addClass('show');
     });
     $('#submenu-productos-contenedor').on('mouseleave',function(){
         $('#submenu-productos-contenedor').removeClass('show');
+    });
+    //SHOW SUBMENU PETMEDICAPRO
+    $('#submenu-petmedicapro').on('mouseover',function(){
+        $('#submenu-productos-contenedor').removeClass('show');
+        $('#submenu-petmedicapro-contenedor').addClass('show');
+    });
+    $('#submenu-petmedicapro-contenedor').on('mouseleave',function(){
+        $('#submenu-petmedicapro-contenedor').removeClass('show');
     });
 
 

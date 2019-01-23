@@ -104,8 +104,7 @@
     transform-origin: left;
     color: #9c8967;
 }
-
-
+/* SUBMENU PRODUCTOS */
 #submenu-productos-contenedor {
     width: 100%;
     height: auto;
@@ -140,7 +139,41 @@
 
 #submenu-productos-contenedor ul .iconos li:first-child{padding-top: 23px;}
 #submenu-productos-contenedor ul .iconos li:last-child{padding-top: 10px;}
-
+/* SUBMENU PETMEDICAPRO */
+#submenu-petmedicapro-contenedor {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    margin-top: 30px;
+    background-color: #f5f5f5;
+    left: 0;   
+    top: 3rem;
+    display: none;
+    padding-bottom: 120px;
+}
+#submenu-petmedicapro-contenedor h1{
+    font-family: helvetica-roman;
+    font-size: 34px;
+    color: #bea373;
+    text-decoration: none;
+    letter-spacing: 0.1px;
+    padding-top: 80px;
+}
+#submenu-petmedicapro-contenedor .menu { margin-left: 67px; }
+#submenu-petmedicapro-contenedor .icon-medico {padding-bottom: 23px;padding-top: 60px;}
+#submenu-petmedicapro-contenedor ul{ list-style-type: none; }
+#submenu-petmedicapro-contenedor ul li{ line-height: 30px; }
+#submenu-petmedicapro-contenedor ul li a.nav-link{ display: initial;font-family: 'helvetica-light';}
+#submenu-petmedicapro-contenedor .icon-medico ul li{
+    font-family: helvetica-roman;
+    color: #bea373;
+    height: 50px;
+    padding-left: 46px;
+    padding-top: 10px;
+    line-height: 17px;
+    letter-spacing: 0.1px;
+    background: url('../img/icon-medico.png') no-repeat left;
+}
 
 
 .show{ /* SHOW SUBMENU CONTENT */
