@@ -41,7 +41,7 @@
     width: 100%;
     height: 100px;
     background-color: white;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 #navbar-principal .container {
@@ -380,15 +380,15 @@
 #contactenos .btn-submit:hover{ color: #9c8967}
 #contactenos input.form-control,#contactenos textarea.form-control{ border: 1px solid #d8d8d8; border-radius: 0; color: #9c9c9c;font-size:14px;font-family: 'gothic'}
 #contactenos input.form-control::placeholder,#contactenos textarea.form-control::placeholder{ color: #b7b7b7;}
-.checkboxes{ padding-left: 20px;}
-.customcheck{display:block;position:relative;padding-left:35px;margin-bottom:12px;cursor:pointer;font-family:'helvetica-roman';font-size:.8rem;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
-.customcheck input{position:absolute;opacity:0;cursor:pointer}
-.checkmark{position:absolute;top:0;left:0;height:20px;width:20px;background-color:#fff;border:1px solid #bea373}
-.customcheck:hover input ~ .checkmark{background-color:#f3f2f0}
-.customcheck input:checked ~ .checkmark{background-color:#bea373}
-.checkmark:after{content:"";position:absolute;display:none}
-.customcheck input:checked ~ .checkmark:after{display:block}
-.customcheck .checkmark:after{left:7px;top:3px;width:5px;height:10px;border:solid #fff;border-width:0 3px 3px 0;-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}
+#contactenos .checkboxes{ padding-left: 20px;}
+#contactenos .customcheck{display:block;position:relative;padding-left:35px;margin-bottom:12px;cursor:pointer;font-family:'helvetica-roman';font-size:.8rem;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+#contactenos .customcheck input{position:absolute;opacity:0;cursor:pointer}
+#contactenos .checkmark{position:absolute;top:0;left:0;height:20px;width:20px;background-color:#fff;border:1px solid #bea373}
+#contactenos .customcheck:hover input ~ .checkmark{background-color:#f3f2f0}
+#contactenos .customcheck input:checked ~ .checkmark{background-color:#bea373}
+#contactenos .checkmark:after{content:"";position:absolute;display:none}
+#contactenos .customcheck input:checked ~ .checkmark:after{display:block}
+#contactenos .customcheck .checkmark:after{left:7px;top:3px;width:5px;height:10px;border:solid #fff;border-width:0 3px 3px 0;-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}
 
 /*****  DISTRIBUIDORES  ******/
 #distribuidores {
@@ -443,3 +443,43 @@
     padding: 0;
     margin: 0;
 }
+
+/*****  REGISTRO  ******/
+#registro {
+    margin-top: 105px;
+    padding-top: 100px;
+    padding-bottom: 140px;
+}
+#registro .form{ padding-top: 80px; }
+#registro h1 { font-family: 'helvetica-roman'; font-size: 34px;color: #333333; margin-bottom: 15px;padding-left: 13px;}
+#registro .fieldset{
+    font-family: 'helvetica-roman';
+    font-weight: bold;
+    font-size: 14px;
+    color: #333333;
+    margin-bottom: 20px;
+}
+#registro a.terminos{ color: #C9A46F; }
+#registro a.iniciar-sesion{ font-family: 'helvetica-roman';
+    font-size: 12.5px;
+    text-decoration: underline;
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    margin-top: 17px; }
+#registro a.iniciar-sesion:hover{ color: #C9A46F; }
+#registro input.form-control,#registro textarea.form-control{ border: 1px solid #d8d8d8; border-radius: 0; color: #9c9c9c;font-size:14px;font-family: 'gothic'}
+#registro input.form-control::placeholder,#registro textarea.form-control::placeholder{ color: #b7b7b7;}
+
+#registro .checkboxes{ padding-left: 20px;}
+#registro .customcheck{display:block;position:relative;padding-left:35px;margin-bottom:12px;cursor:pointer;font-family:'helvetica-roman';font-size:12.5px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+#registro .customcheck input{position:absolute;opacity:0;cursor:pointer}
+#registro .checkmark{position:absolute;top:0;left:0;height:20px;width:20px;background-color:#fff;border:1px solid #bea373}
+#registro .customcheck:hover input ~ .checkmark{background-color:#f3f2f0}
+#registro .customcheck input:checked ~ .checkmark{background-color:#bea373}
+#registro .checkmark:after{content:"";position:absolute;display:none}
+#registro .customcheck input:checked ~ .checkmark:after{display:block}
+#registro .customcheck .checkmark:after{left:7px;top:3px;width:5px;height:10px;border:solid #fff;border-width:0 3px 3px 0;-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}
+#registro .btn-submit{ width: 312px; height: 40px; font-size: 18px;margin-top: 30px; margin-left: 100px;}
+#registro .btn-submit:hover{ color: #9c8967}
