@@ -8,6 +8,11 @@
     font-family: 'helvetica-bold';
     border-radius: 0;
 }
+.btn.btn-line {
+    border: 1px solid #fff;
+    border-radius: 0;
+    padding: 7px 45px;
+}
 .text-blue{ color: #009bdd !important; }
 .card { border-radius: 0;color: #e9e8e9}
 
@@ -483,3 +488,40 @@
 #registro .customcheck .checkmark:after{left:7px;top:3px;width:5px;height:10px;border:solid #fff;border-width:0 3px 3px 0;-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}
 #registro .btn-submit{ width: 312px; height: 40px; font-size: 18px;margin-top: 30px; margin-left: 100px;}
 #registro .btn-submit:hover{ color: #9c8967}
+
+/*****  REGISTRO  ******/
+#iniciar-sesion {
+    margin-top: 130px;
+    padding-top: 100px;
+    padding-bottom: 140px;
+}
+#iniciar-sesion .first-col{
+    font-family: 'helvetica-roman';
+    font-size: 14px;
+    height: 586px;
+    padding: 86px 30px 100px 30px;
+    background-color : #574A3D;
+    color: #fff;
+}
+#iniciar-sesion a{ color:#fff;}
+#iniciar-sesion ul{ color: #fff;list-style-type: none;padding-left: 14px;}
+#iniciar-sesion ul li{    line-height: 28px;} 
+#iniciar-sesion p{ color:#f6f6f6;margin-bottom: 40px;}
+#iniciar-sesion .first-col h1{ font-family: 'helvetica-light';font-size: 24px;margin-bottom: 15px;}
+#iniciar-sesion .btn-line{ margin-top: 160px; }
+#iniciar-sesion .logo{ text-align: center;margin-bottom: 60px;margin-top: 65px; }
+#iniciar-sesion .second-col h1{ font-family: 'helvetica-light'; font-size: 24px;color: #544b40;text-align: center;margin-bottom: 55px; }
+#iniciar-sesion .second-col form label { font-family: 'helvetica-roman'; font-size: 16px; color: #98999c; }
+#iniciar-sesion input.form-control,#iniciar-sesion textarea.form-control{ border: 1px solid #d8d8d8; border-radius: 0; color: #9c9c9c;font-size:14px;font-family: 'gothic'}
+#iniciar-sesion input.form-control::placeholder,#iniciar-sesion textarea.form-control::placeholder{ color: #b7b7b7;}
+#iniciar-sesion .checkboxes{ padding-left: 20px;}
+#iniciar-sesion .customcheck{line-height: 17px;font-size: 13px !important;display:block;position:relative;padding-left:24px;margin-bottom:12px;cursor:pointer;font-family:'helvetica-roman';font-size:12.5px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+#iniciar-sesion .customcheck input{position:absolute;opacity:0;cursor:pointer}
+#iniciar-sesion .checkmark{position:absolute;top:0;left:0;height:15px;width:15px;background-color:#fff;border:1px solid #bea373}
+#iniciar-sesion .customcheck:hover input ~ .checkmark{background-color:#f3f2f0}
+#iniciar-sesion .customcheck input:checked ~ .checkmark{background-color:#bea373}
+#iniciar-sesion .checkmark:after{content:"";position:absolute;display:none}
+#iniciar-sesion .customcheck input:checked ~ .checkmark:after{display:block}
+#iniciar-sesion .customcheck .checkmark:after{left:4px;top:1px;width:5px;height:10px;border:solid #fff;border-width:0 3px 3px 0;-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}
+#iniciar-sesion .btn-submit{ font-family: 'helvetica-light'; font-size: 14px;padding: 9px 25px; background-color: #544b40 !important;margin-top: 30px;}
+#iniciar-sesion .btn-submit:hover{ color: #9c8967}
