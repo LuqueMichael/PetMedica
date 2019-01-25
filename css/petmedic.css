@@ -8,6 +8,8 @@
     font-family: 'helvetica-bold';
     border-radius: 0;
 }
+.text-blue{ color: #009bdd !important; }
+.card { border-radius: 0;color: #e9e8e9}
 
 @media (min-width: 1200px) {
     .container {
@@ -387,3 +389,57 @@
 .checkmark:after{content:"";position:absolute;display:none}
 .customcheck input:checked ~ .checkmark:after{display:block}
 .customcheck .checkmark:after{left:7px;top:3px;width:5px;height:10px;border:solid #fff;border-width:0 3px 3px 0;-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}
+
+/*****  DISTRIBUIDORES  ******/
+#distribuidores {
+    margin-top: 105px;
+    padding-top: 60px;
+    padding-bottom: 110px;
+}
+#distribuidores .fieldset{
+    font-family: helvetica-roman;
+    color: #333333;
+}
+#distribuidores h1 { font-family: 'helvetica-bold'; font-size: 36px;color: #333333; margin-bottom: 30px;}
+#distribuidores .mapa{ margin-bottom: 34px; }
+#distribuidores form label { font-family: 'helvetica-bold'; font-size: 16px; color: #55575b; }
+#distribuidores form select { 
+    height: 40px;
+    border: 1px solid #d8d8d8;
+    border-top: 1px solid #ececec;
+    border-radius: .1px;color:#55575b;  
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Some browsers will not display the caret when using calc, so we put the fallback first */     
+    background: url("../img/form-select-arrow.png") white no-repeat 98% 10px !important; /* Better placement regardless of input width */
+}
+#distribuidores form select:focus{
+    background: url("../img/form-select-arrow-up.png") white no-repeat 98% 10px !important; /* Better placement regardless of input width */
+}
+#distribuidores .distribuidores-contenedor .item{ padding: 0;
+    padding-bottom: 35px;padding-top: 65px;
+    border-bottom: 1px solid #d2d1d2; }
+    #distribuidores .distribuidores-contenedor .item:nth-child(1){ padding-top: 0 }
+      
+#distribuidores .distribuidores-contenedor .item ul h1{
+    font-size: 30px;
+    font-family: 'helvetica-light';
+    color: #55575b;
+    margin-bottom: 20px;
+}  
+#distribuidores h4.title{
+    font-size: 16px;
+    font-family: 'helvetica-bold';
+    color: #000;
+    margin-bottom: 40px;
+    margin-top: 56px;
+}  
+#distribuidores .distribuidores-contenedor .item ul{
+    font-family: 'helvetica-roman';
+    font-size: 16px;
+    list-style-type: none;
+    color: #55575b;
+    padding: 0;
+    margin: 0;
+}
