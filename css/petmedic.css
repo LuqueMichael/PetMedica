@@ -778,7 +778,7 @@ li {
     line-height: normal;
 }
 
-#navbar-principal ul li a.nav-link:hover:before {
+#navbar-principal ul li a.nav-link:hover:before{
     transform: scaleX(1);
     transform-origin: left;
     color: #9c8967;
@@ -819,6 +819,13 @@ li {
     line-height: 30px;
     transition: .3s;
     transform-origin: top;
+    height: auto;
+    transition: ease-out all .5s;
+    display: block;
+}
+#submenu-productos-contenedor ul li.hide {
+    transition: ease-out all .5s;
+    display: none;
 }
 
 #submenu-productos-contenedor ul li a.nav-link {
