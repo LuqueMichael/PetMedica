@@ -192,6 +192,9 @@ body {
     color: #55575b;
     float: left;
 }
+#main.pro .card-body a.link-more{
+    float: right;
+}
 
 #main .card-body .info {
     background: #fff;
@@ -320,13 +323,15 @@ body {
     padding-right: 40px;
     font-size: 13.8px;
 }
-
-#main.producto-detalle .submenu a.btn.btn-buy {
+#main.producto-detalle .submenu .dropdown.show{
+    top: -1.1rem;
+}
+#main.producto-detalle .submenu button.btn.btn-buy {
     font-family: 'helvetica-roman';
     background: #826d4d;
     height: 68px;
     border-radius: 0;
-    width: 120%;
+    width: 12.7rem;
     position: absolute;
     top: -21px;
     left: -20px;
@@ -334,7 +339,32 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 999;
 }
+#main.producto-detalle .social-share{
+    position: absolute;
+    top:0;
+    right: -80px;
+}
+#main.producto-detalle .social-share ul{
+    list-style-type: none;    
+}
+#main.producto-detalle .social-share ul li {
+    margin-bottom: 40px;
+}
+#main.producto-detalle .social-share ul li a{
+    padding: 10px 20px;
+    border: 1px solid #f1f1f1;
+    border-radius: 5px;
+}
+#main.producto-detalle .social-share ul li a:hover{
+    background-color: #e8e0d3;
+}
+#main.producto-detalle .social-share ul li a.twitter{ background-image: url('../img/icon_menu/icon-twitter.png');background-repeat: no-repeat;background-position: center;}
+#main.producto-detalle .social-share ul li a.fb{ background-image: url('../img/icon_menu/icon-fb.png');background-repeat: no-repeat;background-position: center;}
+#main.producto-detalle .social-share ul li a.google{ background-image: url('../img/icon_menu/icon-google.png');background-repeat: no-repeat;background-position: center;}
+#main.producto-detalle .social-share ul li a.pin{ background-image: url('../img/icon_menu/icon-pin.png');background-repeat: no-repeat;background-position: center;}
+#main.producto-detalle .social-share ul li a.comm{ background-image: url('../img/icon_menu/icon-com.png');background-repeat: no-repeat;background-position: center;}
 
 #main.producto-detalle .warning {
     font-family: 'helvetica-roman';
@@ -374,7 +404,8 @@ body {
     opacity: 1;
     transition: ease all 0.2s;
 }
-#main.home .widget .btn-next{
+
+#main.home .widget .btn-next {
     float: right;
     font-family: 'helvetica-roman';
     font-size: 14px;
@@ -475,6 +506,9 @@ body {
 #main .submenu ul.nav li a.nav-link:before {
     left: 35px;
 }
+#main.pro .submenu ul.nav li a.nav-link:before {
+    left: 0px;
+}
 
 #main.pro .card.video {
     padding: 0;
@@ -497,6 +531,18 @@ body {
 
 /* POSTS | ARTICLES */
 /*.post{ padding-top: 55px; padding-bottom: 20px;}*/
+.post{
+    opacity: 1;
+    height: auto;
+    transition: ease 1s all;
+    transform: scale(1);
+}
+.post.hide{
+    opacity: 0;
+    height: 0;
+    transform: scale(0);
+    transition: ease .5s all;
+}
 .post header h1 {
     font-family: 'helvetica-bold';
     font-size: 20px;
@@ -1042,6 +1088,7 @@ li {
     margin-right: 5px;
     font-size: 10px;
 }
+
 #footer ul.no-spacing li::first-letter {
     margin: 0 !important;
     font-size: 12px;
@@ -1685,4 +1732,62 @@ li {
         display: block;
         visibility: visible;
     }
+}
+
+/* MODALS */
+.modal-window {
+    position: fixed;
+    background-color: rgba(139, 109, 74, 0.67);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+
+.modal-window:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-window>div {
+    width: 70%;
+    position: absolute;
+    top: 450px;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    background: #ffffff;
+    color: #333333;
+}
+
+.modal-window header {
+    font-weight: bold;
+}
+
+.modal-window h1 {
+    font-size: 150%;
+    margin: 0 0 15px;
+    color: #333333;
+}
+
+.modal-close {
+    color: #aaa;
+    font-family: 'helvetica-roman';
+    line-height: 35px;
+    font-size: 80%;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 70px;
+    text-decoration: none;
+}
+
+.modal-close:hover {
+    color: #000;
 }

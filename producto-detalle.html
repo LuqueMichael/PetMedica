@@ -135,7 +135,7 @@
     </nav>
 
     <section id="main" class="producto-detalle">
-        <div class="container">
+        <div class="container" style="position: relative">
             <div class="row ">
                 <div class="col-lg-6">
                     <img src="img/products/aminoplexforte-l.png" alt="" class="image-product">
@@ -150,14 +150,14 @@
                             <div class="card">
                                 <div class="card-header" id="headingOne">
                                     <h5 class="mb-0">
-                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
-                                            aria-expanded="true" aria-controls="collapseOne">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                             Fórmula
                                         </button>
                                     </h5>
                                 </div>
 
-                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                                     <div class="card-body">
                                         Dextrosa 50 mg, Cloruro de calcio 0.15 mg, Cloruro de potasio 0.2 mg, Sulfato
                                         de magnesio 0.2 mg, Acetato de sodio trihidratado 2.5 mg, Hidrocloruro de
@@ -248,17 +248,25 @@
                             <div class="col col-lg-10">
                                 <ul class="nav">
                                     <li class="nav-item"><a class="nav-link" href="#"><img src="img/icon-copia-image.png"
-                                                alt=""> Folleto Comercial</a></li>
+                                                alt="">Folleto Comercial</a></li>
                                     <li class="nav-item"><a class="nav-link" href="#"><img src="img/icon-copia-pdf.png"
                                                 alt="">Inserto</a></li>
-                                    <li class="nav-item"><a class="nav-link active" href="#"><img src="img/icon-copia-video.png"
+                                    <li class="nav-item"><a class="nav-link active" href="#modal-video"><img src="img/icon-copia-video.png"
                                                 alt="">Video</a></li>
                                     <li class="nav-item"><a class="nav-link" href="#"><img src="img/icon-copia-share.png"
                                                 alt="">Compartir</a></li>
                                 </ul>
                             </div>
                             <div class="col-2">
-                                <a href="#" class="btn btn-buy">Comprar ahora</a>
+                                <div class="dropdown">
+                                    <button class="btn btn-buy dropdown-toggle" data-toggle="dropdown">Comprar
+                                        ahora</button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -350,28 +358,24 @@
                     </div>
                 </div>
             </div>
+
+            <div class="social-share">
+                <ul>
+                    <li><a href="#" class="social twitter"></a></li>
+                    <li><a href="#" class="social fb"></a></li>
+                    <li><a href="#" class="social google"></a></li>
+                    <li><a href="#" class="social pin"></a></li>
+                    <li><a href="#" class="social comm"></a></li>
+                </ul>
+            </div>
         </div>
     </section>
     <!-- FOOTER -->
-
-    <!-- Modal -->
-    <div class="modal fade" id="modalVideo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
+    <div id="modal-video" class="modal-window">
+        <div>
+            <a href="#" title="Close" class="modal-close">Close</a>
+            <div>
+                <img src="https://via.placeholder.com/1050x580?text=VIDEO" alt="">
             </div>
         </div>
     </div>
