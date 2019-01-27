@@ -59,7 +59,8 @@ $(function () {
         if(value=='todo'){
             $("#nav-lvl-2").find('a').parent().removeClass('hide');
             $("#nav-lvl-3").find('a').parent().removeClass('hide');
-        }else{            
+        }else{   
+            $("#nav-lvl-3").find('a').parent().removeClass('hide');
             $("#nav-lvl-2").find('a').filter(function () {
                 let flag = $(this).attr('data-parent').toLowerCase().indexOf(value) > -1;
                 if(flag){
