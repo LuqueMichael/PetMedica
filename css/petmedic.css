@@ -281,6 +281,10 @@ body {
     margin-top: 43px;
 }
 
+#main .info-producto .accordion .card-header h5{
+    background-color: #ffF;
+}
+
 #main .info-producto .card-header {
     margin-bottom: 40px;
 }
