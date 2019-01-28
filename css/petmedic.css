@@ -1042,6 +1042,10 @@ li {
     margin-right: 5px;
     font-size: 10px;
 }
+#footer ul.no-spacing li::first-letter {
+    margin: 0 !important;
+    font-size: 12px;
+}
 
 #footer .redesfooter li {
     display: inline-flex;
