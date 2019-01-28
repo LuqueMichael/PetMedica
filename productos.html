@@ -136,7 +136,7 @@
             <div class="row mb-5">
                 <div class="col-12">
                     <div class="card">
-                        <div class="submenu card-body row">
+                        <div id="card-submenu" class="submenu card-body row">
                             <div class="col col-lg-3">
                                 <div class="dropdown">
                                     <button class="btn btn-drop dropdown-toggle" type="button" id="dropdownMenuButton"
@@ -152,14 +152,14 @@
                             </div>
                             <div class="col col-lg-9">
                                 <ul class="nav mt-2">
-                                    <li class="nav-item"><a class="nav-link" href="#">Todos</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Antibióticos</a></li>
-                                    <li class="nav-item"><a class="nav-link active" href="#">Suplementos</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Antiparasitarios</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Antiinflamatorios</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Anestésicos</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Otros</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Nutricionales</a></li>
+                                    <li class="nav-item"><a class="nav-link active" href="#" data-target="todo">Todos</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#" data-target="antibioticos">Antibióticos</a></li>
+                                    <li class="nav-item"><a class="nav-link " href="#" data-target="suplementos">Suplementos</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#" data-target="antiparasitarios">Antiparasitarios</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#" data-target="antiinflamatorios">Antiinflamatorios</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#" data-target="anestesicos">Anestésicos</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#" data-target="otros">Otros</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#" data-target="nutricionales">Nutricionales</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -168,7 +168,7 @@
             </div>
             <div class="row lista-productos">
                 <!-- ITEM -->
-                <div class="col-lg-4">
+                <div class="col-lg-4 post" data-target="antibioticos">
                     <div class="card">
                         <div class="card-body">
                             <div class="info">
@@ -193,7 +193,7 @@
                     </div>
                 </div>
                 <!-- ITEM -->
-                <div class="col-lg-4">
+                <div class="col-lg-4 post" data-target="antiparasitarios">
                     <div class="card">
                         <div class="card-body">
                             <div class="info">
@@ -218,7 +218,7 @@
                     </div>
                 </div>
                 <!-- ITEM -->
-                <div class="col-lg-4">
+                <div class="col-lg-4 post" data-target="antiparasitarios">
                     <div class="card">
                         <div class="card-body">
                             <div class="info">
@@ -243,7 +243,7 @@
                     </div>
                 </div>
                 <!-- ITEM -->
-                <div class="col-lg-4">
+                <div class="col-lg-4 post" data-target="suplementos">
                     <div class="card">
                         <div class="card-body">
                             <div class="info">
@@ -268,7 +268,7 @@
                     </div>
                 </div>
                 <!-- ITEM -->
-                <div class="col-lg-4">
+                <div class="col-lg-4 post" data-target="antiinflamatorios">
                     <div class="card">
                         <div class="card-body">
                             <div class="info">
@@ -293,7 +293,7 @@
                     </div>
                 </div>
                 <!-- ITEM -->
-                <div class="col-lg-4">
+                <div class="col-lg-4 post" data-target="antibioticos">
                     <div class="card">
                         <div class="card-body">
                             <div class="info">

@@ -33,7 +33,8 @@ $(function () {
     });
 
     //FILTER PRODUCTS
-    $("#card-submenu").find('.nav-link').on("click", function () {
+    $("#card-submenu").find('.nav-link').on("click", function (e) {
+        e.preventDefault();
         var value = $(this).attr('data-target');
         $('#card-submenu').find('.nav-link').removeClass('active');
         $(this).addClass('active');

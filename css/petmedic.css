@@ -511,6 +511,9 @@ body {
 
 #main .submenu {
     padding: 10px 30px;
+    position: relative;
+    z-index: 999;
+    top: 0;
 }
 
 #main .submenu img {
@@ -521,6 +524,9 @@ body {
     left: 35px;
 }
 #main.pro .submenu ul.nav li a.nav-link:before {
+    left: 0px;
+}
+#main .submenu ul.nav li a.nav-link:before {
     left: 0px;
 }
 
@@ -549,13 +555,17 @@ body {
     opacity: 1;
     height: auto;
     transition: ease 1s all;
-    transform: scale(1);
+    /*transform: scale(1);*/
+    position: relative;
+    bottom: 0;
 }
 .post.hide{
     opacity: 0;
     height: 0;
-    transform: scale(0);
+    /*transform: scale(0);*/
     transition: ease .5s all;
+    position: absolute;
+    bottom: 5rem;
 }
 .post header h1 {
     font-family: 'helvetica-bold';
