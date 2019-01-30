@@ -769,7 +769,8 @@ li {
     position: relative;
 }
 
-#navbar-principal ul li a.nav-link:hover {
+#navbar-principal ul li a.nav-link:hover, 
+#navbar-principal ul li a.nav-link.active{
     color: #9c8967;
     transition: .3s;
 }
@@ -788,7 +789,8 @@ li {
     line-height: normal;
 }
 
-#navbar-principal ul li a.nav-link:hover:before{
+#navbar-principal ul li a.nav-link:hover:before,
+#navbar-principal ul li a.nav-link:active:before{
     transform: scaleX(1);
     transform-origin: left;
     color: #9c8967;
