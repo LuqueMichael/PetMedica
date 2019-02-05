@@ -10,7 +10,7 @@ $(function () {
     });
 
     //SHOW SUBMENU PRODUCTS
-    $('#submenu-productos').on('mouseover', function () {
+    /*$('#submenu-productos').on('mouseover', function () {
         $('#submenu-petmedicapro-contenedor').removeClass('show');
         $('#submenu-productos-contenedor').addClass('show');
     });
@@ -21,6 +21,26 @@ $(function () {
     $('#submenu-petmedicapro').on('mouseover', function () {
         $('#submenu-productos-contenedor').removeClass('show');
         $('#submenu-petmedicapro-contenedor').addClass('show');
+    });
+    $('#submenu-petmedicapro-contenedor').on('mouseleave', function () {
+        $('#submenu-petmedicapro-contenedor').removeClass('show');
+    });*/
+
+    $('#navbar-principal').find('ul > li').children().on('mouseover', function () {
+        let nav = $(this).attr('data-type');
+        /*$('#submenu-petmedicapro-contenedor').removeClass('show');
+        $('#submenu-productos-contenedor').removeClass('show');*/
+
+        if (nav == 'submenu-productos') {
+            $('#submenu-petmedicapro-contenedor').removeClass('show');
+            $('#submenu-productos-contenedor').addClass('show');
+        } else if (nav == 'submenu-petmedicapro') {
+            $('#submenu-productos-contenedor').removeClass('show');
+            $('#submenu-petmedicapro-contenedor').addClass('show');
+        }
+    });
+    $('#submenu-productos-contenedor').on('mouseleave', function () {
+        $('#submenu-productos-contenedor').removeClass('show');
     });
     $('#submenu-petmedicapro-contenedor').on('mouseleave', function () {
         $('#submenu-petmedicapro-contenedor').removeClass('show');
@@ -38,14 +58,14 @@ $(function () {
         var value = $(this).attr('data-target');
         $('#card-submenu').find('.nav-link').removeClass('active');
         $(this).addClass('active');
-        if(value=='todo'){
+        if (value == 'todo') {
             $(".post").removeClass('hide');
-        }else{
+        } else {
             $(".post").filter(function () {
                 let flag = $(this).attr('data-target').toLowerCase().indexOf(value) > -1;
-                if(flag){
+                if (flag) {
                     $(this).removeClass('hide');
-                }else{
+                } else {
                     $(this).addClass('hide');
                 }
             });
@@ -57,16 +77,16 @@ $(function () {
         var value = $(this).attr('data-target');
         /*$('#nav-lvl-1').find('a').parent().removeClass('active');
         $(this).addClass('active');*/
-        if(value=='todo'){
+        if (value == 'todo') {
             $("#nav-lvl-2").find('a').parent().removeClass('hide');
             $("#nav-lvl-3").find('a').parent().removeClass('hide');
-        }else{   
+        } else {
             $("#nav-lvl-3").find('a').parent().removeClass('hide');
             $("#nav-lvl-2").find('a').filter(function () {
                 let flag = $(this).attr('data-parent').toLowerCase().indexOf(value) > -1;
-                if(flag){
+                if (flag) {
                     $(this).parent().removeClass('hide');
-                }else{
+                } else {
                     $(this).parent().addClass('hide');
                 }
             });
@@ -76,18 +96,42 @@ $(function () {
         var value = $(this).attr('data-target');
         /*$('#nav-lvl-2').find('a').parent().removeClass('active');
         $(this).addClass('active');*/
-        if(value=='todo'){
+        if (value == 'todo') {
             $("#nav-lvl-2").find('a').parent().removeClass('hide');
             $("#nav-lvl-3").find('a').parent().removeClass('hide');
-        }else{            
+        } else {
             $("#nav-lvl-3").find('a').filter(function () {
                 let flag = $(this).attr('data-parent').toLowerCase().indexOf(value) > -1;
-                if(flag){
+                if (flag) {
                     $(this).parent().removeClass('hide');
-                }else{
+                } else {
                     $(this).parent().addClass('hide');
                 }
             });
+        }
+    });
+
+    //SMOOOTH SCROLL
+    $('.nav-link').click(function (e) {
+        /*e.preventDefault();*/
+        var sectionTo = $(this).attr('href');
+        if (sectionTo == '#share-buttons') { //producto-detalle buttons
+            let $elem = $(this).parent().find('.bubble');
+            if( $elem.hasClass('show') ){
+                $elem.removeClass('show');
+                setTimeout(function(){ $elem.hide() },500);
+            }else{
+                $elem.show();
+                $elem.addClass('show');
+            }
+        } else {            
+            let position = $(sectionTo).offset().top;
+            if (sectionTo == '#main') {
+                position -= 80;
+            }
+            $('html, body').animate({
+                scrollTop: position
+            }, 1000);
         }
     });
 

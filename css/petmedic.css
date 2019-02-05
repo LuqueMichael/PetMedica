@@ -18,6 +18,14 @@ body {
     border-radius: 0;
 }
 
+.btn-black {
+    width: 180px;
+    background-color: #333333;
+    color: #fff;
+    font-family: 'helvetica-light';
+    border-radius: 0;
+}
+
 .btn.btn-line {
     border: 1px solid #fff;
     border-radius: 0;
@@ -26,6 +34,9 @@ body {
 
 .text-blue {
     color: #009bdd !important;
+}
+.text-yellow{
+    color: #826d4d !important;
 }
 
 .card {
@@ -62,7 +73,7 @@ body {
 
 /* MAIN SECTION */
 #main {
-    padding: 70px 0;
+    padding: 97px 0;
     margin-top: 106px;
 }
 
@@ -112,20 +123,19 @@ body {
 
 #main .box-fortaleciendo {
     width: 530px;
-    height: 355px;
-    background: #fff;
-    padding: 53px 90px 30px 65px;
+    height: 355px;        
     font-family: 'helvetica-roman';
     position: absolute;
     bottom: 3rem;
     right: -6rem;
     z-index: 99;
 }
+#main .box-fortaleciendo .white-box { background: #fff;padding: 53px 90px 30px 73px; position: relative; }
 
 #main .plus {
     position: absolute;
-    left: 13.4rem;
-    top: -.7rem;
+    left: -11rem;
+    top: -10.8rem;
 }
 
 #main .box-fortaleciendo h1 {
@@ -136,12 +146,19 @@ body {
     margin-bottom: 17px;
     position: relative;
 }
+#main .box-fortaleciendo a {
+    color: #545454;
+    font-family: 'helvetica-roman';
+    font-size: 15px;
+}
 
 #main .box-fortaleciendo h1::after {
     content: " ";
     position: absolute;
-    height: 1px;
-    width: 20px;
+    height: 2px;
+    width: 50%;
+    bottom: 0;
+    left: 0;
     background: #826d4d;
 }
 
@@ -210,7 +227,7 @@ body {
 }
 
 #main .card-body .info-hover {
-    padding-top: 14px;
+    padding-top: 12px;
     height: 30px;
     padding-left: 15px;
     display: flex;
@@ -227,7 +244,7 @@ body {
 
 #main .card-body .info-hover .icon {
     width: 22px;
-    height: 25px;
+    height: 29px;
     margin: 0 15px 0 0;
     float: right;
 }
@@ -297,13 +314,14 @@ body {
     text-align: left;
     position: relative;
 }
+#main .info-producto .card-header .btn-link:hover { border: 0;text-decoration: none; }
 #main .info-producto .btn-link::before{
     content: '';
     width: 100%;
     height: 1px;
     background: #f2f1f2;
     position: absolute;
-    bottom: -22px;
+    bottom: -10px;
     right: 0;
 }
 
@@ -330,15 +348,73 @@ body {
 }
 
 #main.producto-detalle .submenu {
-    padding: 20px 30px;
+    padding: 18px 30px;
 }
 
 #main.producto-detalle .submenu .nav-item {
     padding-right: 40px;
     font-size: 13.8px;
 }
-#main.producto-detalle .submenu .dropdown.show{
-    top: -1.1rem;
+#main.producto-detalle .submenu .nav-link::before {
+    left: 32.5px !important;
+}
+#main.producto-detalle .submenu .bubble {
+    border: 1px solid #ccc;
+    background: #fff;
+    width: 135px;
+    height: 45px;
+    border-radius: 5px;
+    position: absolute;
+    top: -2rem;
+    left: 13px;
+    padding-top: 4px;
+    padding-left: 6px;
+    opacity: 0;
+    transition: ease all .3s;
+}
+#main.producto-detalle .submenu .bubble.show{
+    opacity: 1;
+    top: -5.4rem;
+}
+#main.producto-detalle .submenu .bubble::before {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 13px;
+    width: 0;
+    height: 0;
+    border-width: 7px 6px 0;
+    border-style: solid;
+    border-color: #cccccc transparent transparent;
+}
+#main.producto-detalle .submenu .bubble::after {
+    content: "";
+    position: absolute;
+    bottom: -7px;
+    left: 15px;
+    width: 0;
+    height: 0;
+    border-width: 7px 4px 0;
+    border-style: solid;
+    border-color: #ffffff transparent transparent;
+}
+#main.producto-detalle .submenu .bubble .social{
+    width: 36px;
+    height: 36px;    
+    display: inline-block;
+    transition: linear all .2s;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#main.producto-detalle .submenu .bubble .social.twitter{ background-image: url('../img/icon-twt.png')}
+#main.producto-detalle .submenu .bubble .social.twitter:hover{ background-image: url('../img/icon-twt-h.png')}
+#main.producto-detalle .submenu .bubble .social.fb{ background-image: url('../img/icon-fb.png')}
+#main.producto-detalle .submenu .bubble .social.fb:hover{ background-image: url('../img/icon-fb-h.png')}
+#main.producto-detalle .submenu .bubble .social.wsp{ background-image: url('../img/icon-wsp.png')}
+#main.producto-detalle .submenu .bubble .social.wsp:hover{ background-image: url('../img/icon-wsp-h.png')}
+
+#main.producto-detalle .submenu .dropdown-menu{
+    width: 12.7rem !important;
 }
 #main.producto-detalle .submenu button.btn.btn-buy {
     font-family: 'helvetica-roman';
@@ -347,7 +423,7 @@ body {
     border-radius: 0;
     width: 12.7rem;
     position: absolute;
-    top: -21px;
+    top: -19px;
     left: -20px;
     color: #fff;
     display: flex;
@@ -722,6 +798,7 @@ body {
 
 #navbar-principal.large {
     height: 106px !important;
+    background: #fff;
 }
 
 #navbar-principal.large ul li.nav-item {
@@ -731,6 +808,14 @@ body {
 #navbar-principal.small {
     height: 83px !important;
 }
+
+/* header normal */
+#navbar-principal.large img.logo { width: 210px;}
+
+/*header chico */
+#navbar-principal.small{ height: 83px !important;}
+#navbar-principal.small .navbar-logo img.logo { width: 180px; height: 47px; }
+
 
 /*#navbar-principal.small .navbar-logo img { width: 180px; height: 47px;  padding-top: 15px; }*/
 #navbar-principal.small ul li.nav-item {
@@ -799,14 +884,24 @@ li {
 /* SUBMENU PRODUCTOS */
 #submenu-productos-contenedor {
     width: 100%;
-    height: auto;
+    height: 0;
     position: absolute;
     margin-top: 30px;
     background-color: #f5f5f5;
     left: 0;
     top: 3rem;
-    display: none;
-    padding-bottom: 60px;
+    opacity: 0;
+    transition: ease all .5s;
+    overflow: hidden;
+    /*display: none;*/
+}
+#submenu-productos-contenedor.show {
+    /* SHOW SUBMENU CONTENT */
+    /*display: inline-block !important;*/
+    z-index: 1;
+    /*transition: .3s;*/
+    height: 600px !important;
+    opacity: 1 !important;    
 }
 
 #submenu-productos-contenedor h1 {
@@ -860,14 +955,24 @@ li {
 /* SUBMENU PETMEDICAPRO */
 #submenu-petmedicapro-contenedor {
     width: 100%;
-    height: auto;
+    height: 0;
     position: absolute;
     margin-top: 30px;
     background-color: #f5f5f5;
     left: 0;
     top: 3rem;
-    display: none;
-    padding-bottom: 120px;
+    /*display: none;*/
+    opacity: 0;
+    transition: ease all .5s;
+    overflow: hidden;
+}
+#submenu-petmedicapro-contenedor.show {
+    /* SHOW SUBMENU CONTENT */
+    /*display: inline-block !important;*/
+    z-index: 1;
+    /*transition: .3s;*/
+    height: 300px !important;
+    opacity: 1 !important;    
 }
 
 #submenu-petmedicapro-contenedor h1 {
@@ -910,6 +1015,15 @@ li {
     line-height: 17px;
     letter-spacing: 0.1px;
     background: url('../img/icon-medico.png') no-repeat left;
+}
+
+#submenu-productos-contenedor .nav-footer{
+    background-color: #efefef;
+    padding: 14px 0px;
+    color: #6F6F6F;
+    font-size: 13px;
+    font-family: 'helvetica-light';
+    margin-top: 60px;
 }
 
 #navbar-pro {
@@ -955,17 +1069,11 @@ li {
     padding-top: 5px;
 }
 
-.show {
-    /* SHOW SUBMENU CONTENT */
-    display: inline-block !important;
-    z-index: 1;
-    transition: .3s;
-}
-
 #icon-plus.pro {
     background-image: url('../img/icon_menu/icon-plus-pro.png');
     width: 21px;
     height: 21px;
+    transition: ease all .2s;
 }
 
 #icon-plus.pro:hover {
@@ -976,12 +1084,14 @@ li {
     background-image: url('../img/icon_menu/icon-agrovet.png');
     width: 23px;
     height: 23px;
+    transition: ease all .2s;
 }
 
 #icon-agrovet.pro {
     background-image: url('../img/icon_menu/icon-agrovet-pro.png') !important;
     width: 25px;
     height: 25px;
+    transition: ease all .2s;
 }
 
 #icon-agrovet:hover {
@@ -997,6 +1107,7 @@ li {
     background-image: url('../img/icon_menu/icon-facebook.png');
     width: 11px;
     height: 17px;
+    transition: ease all .2s;
 }
 
 #icon-facebook.pro {
@@ -1015,6 +1126,7 @@ li {
     background-image: url('../img/icon_menu/icon-youtube.png');
     width: 21px;
     height: 17px;
+    transition: ease all .2s;
 }
 
 #icon-youtube.pro {
@@ -1035,6 +1147,7 @@ li {
     background-image: url('../img/icon_menu/icon-ingles.png');
     width: 30px;
     height: 21px;
+    transition: ease all .2s;
 }
 
 #icon-ingles:hover {
@@ -1052,7 +1165,7 @@ li {
     background-color: #544b40;
 }
 
-#footer .container {
+#footer .container.info {
     width: 1150px;
     height: auto;
     padding-top: 50px;
@@ -1116,16 +1229,23 @@ li {
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
 }
-
+#footer .description {
+    width: 178px;
+    font-family: 'helvetica-roman';
+    color: #f3f3f3;
+    font-size: 12.5px;
+    padding: 30px 0;
+}
+/*
 #footer ul li::first-letter {
     margin-right: 5px;
     font-size: 10px;
-}
-
+}*/
+/*
 #footer ul.no-spacing li::first-letter {
     margin: 0 !important;
     font-size: 12px;
-}
+}*/
 
 #footer .redesfooter li {
     display: inline-flex;
@@ -1148,11 +1268,24 @@ li {
     list-style-position: inside;
 }
 
+#footer .social{
+    width: 24px;
+    height: 23px;
+    display: inline-block;
+    margin-right: 7px;
+    transition : ease all .2s;
+}
+#footer .social.yt{ background: url('../img/icon_footer/icon-yt.png') }
+#footer .social.yt:hover{ background: url('../img/icon_footer/icon-yt-h.png') }
+
+#footer .social.fb{ background: url('../img/icon_footer/icon-fb.png') }
+#footer .social.fb:hover{ background: url('../img/icon_footer/icon-fb-h.png') }
+
 #Copyright {
     width: 100%;
     height: 80px;
     background-color: #222221;
-    padding-top: 0;
+    padding-top: 23px;
 }
 
 #Copyright.pro {
@@ -1160,11 +1293,13 @@ li {
 }
 
 #Copyright p {
-    font-family: helvetica-roman;
+    font-family: 'helvetica-roman';
     font-size: 12px;
-    color: #f6f6f6;
-    text-align: center;
+    color: #f6f6f6;    
+    margin: 0;
+    text-align: right;
 }
+#Copyright p.copy { color: #a98c57; }
 
 /*****  CONTACTENOS  ******/
 #contactenos {
@@ -1248,7 +1383,7 @@ li {
     border-radius: 0;
     color: #9c9c9c;
     font-size: 14px;
-    font-family: 'gothic'
+    font-family: 'helvetica-light';
 }
 
 #contactenos input.form-control::placeholder,
@@ -1263,7 +1398,7 @@ li {
 #contactenos .customcheck {
     display: block;
     position: relative;
-    padding-left: 35px;
+    padding-left: 21px;
     margin-bottom: 12px;
     cursor: pointer;
     font-family: 'helvetica-roman';
@@ -1284,10 +1419,11 @@ li {
     position: absolute;
     top: 0;
     left: 0;
-    height: 20px;
-    width: 20px;
+    height: 13px;
+    width: 13px;
     background-color: #fff;
-    border: 1px solid #bea373
+    border: 1px solid #bea373;
+    margin-top: 3px;
 }
 
 #contactenos .customcheck:hover input~.checkmark {
@@ -1309,8 +1445,8 @@ li {
 }
 
 #contactenos .customcheck .checkmark:after {
-    left: 7px;
-    top: 3px;
+    left: 3px;
+    top: 0;
     width: 5px;
     height: 10px;
     border: solid #fff;
@@ -1610,7 +1746,7 @@ li {
     border-radius: 0;
     color: #9c9c9c;
     font-size: 14px;
-    font-family: 'gothic'
+    font-family: 'helvetica-light';
 }
 
 #iniciar-sesion input.form-control::placeholder,
@@ -1694,6 +1830,9 @@ li {
 
 #iniciar-sesion .btn-submit:hover {
     color: #9c8967
+}
+#iniciar-sesion .bg{
+    background: url('../img/bg-body-login.png') repeat-y;
 }
 
 /* HOME - SLIDER - WIDGET */
@@ -1823,4 +1962,52 @@ li {
 
 .modal-close:hover {
     color: #000;
+}
+
+/* SUSCRIBE - SECTION */
+.suscribe {
+    margin-top: 230px;
+}
+.suscribe h4{
+    font-family: 'helvetica-light';
+    font-size: 21px;
+    color: #333333;
+    margin: 0;
+    padding-top: 3px;
+}
+.suscribe input.input-suscribe{
+    width: 89%;
+    border: 0;
+    /*border-bottom: 2px solid #000;*/
+    /*padding: 10px 0 2px 0;*/     
+    animation: escribir 4s steps(30) /*infinite alternate-reverse*/;
+    position: relative;
+    color: #333;
+    transition: ease color .5s;
+    outline: none;
+}
+.suscribe input.input-suscribe:focus::placeholder{
+    color: #b3b3b3;      
+}
+.suscribe hr.line{
+    background-color: #000;
+    width: 88%;
+    height: 1.5px;
+    margin: 0;
+}
+.suscribe input.input-suscribe::placeholder{
+    font-family: 'gothic';
+    font-size: 17px;
+    color: #333333;
+    transition: ease color .5s;  
+}
+@keyframes escribir {
+    from { width: 0%; border-right: 1px solid #000;   }
+    to { width:95%;border-right: 0 solid #000;    }
+}
+
+
+/*  FIXES */
+.productos-destacados {
+    padding-top: 195px !important;
 }
