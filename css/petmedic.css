@@ -1965,17 +1965,23 @@ li {
 }
 
 /* SUSCRIBE - SECTION */
-.suscribe {
-    margin-top: 230px;
+
+#ofertas{
+    background: #f3f3f3;
+    height: 190px;
 }
-.suscribe h4{
+#ofertas .suscribe {
+    margin-top: 130px;
+    padding-top: 90px;
+}
+#ofertas .suscribe h4{
     font-family: 'helvetica-light';
     font-size: 21px;
     color: #333333;
     margin: 0;
     padding-top: 3px;
 }
-.suscribe input.input-suscribe{
+#ofertas .suscribe input.input-suscribe{
     width: 89%;
     border: 0;
     /*border-bottom: 2px solid #000;*/
@@ -1986,16 +1992,16 @@ li {
     transition: ease color .5s;
     outline: none;
 }
-.suscribe input.input-suscribe:focus::placeholder{
+#ofertas .suscribe input.input-suscribe:focus::placeholder{
     color: #b3b3b3;      
 }
-.suscribe hr.line{
+#ofertas .suscribe hr.line{
     background-color: #000;
     width: 88%;
     height: 1.5px;
     margin: 0;
 }
-.suscribe input.input-suscribe::placeholder{
+#ofertas .suscribe input.input-suscribe::placeholder{
     font-family: 'gothic';
     font-size: 17px;
     color: #333333;
