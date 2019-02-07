@@ -6,7 +6,9 @@
 body {
     overflow-x: hidden;
 }
-
+.card-header{
+    background: #fff;
+}
 .nav-link {
     padding: 0 !important;
 }
@@ -75,6 +77,10 @@ body {
 #main {
     padding: 97px 0;
     margin-top: 106px;
+    position: relative;
+    z-index: 2;
+}
+#iniciar-sesion{
     position: relative;
     z-index: 2;
 }
@@ -541,7 +547,7 @@ body {
 }
 
 #main.home .widget .card.video:hover::after {
-    opacity: 1;
+    opacity: .3;
     transition: ease all 0.2s;
 }
 
@@ -1737,9 +1743,8 @@ li {
 
 /*****  REGISTRO  ******/
 #iniciar-sesion {
-    margin-top: 130px;
-    padding-top: 100px;
-    padding-bottom: 140px;
+    margin-top: 230px;    
+    margin-bottom: 140px;
 }
 
 #iniciar-sesion .first-col {
@@ -1890,9 +1895,6 @@ li {
 
 #iniciar-sesion .btn-submit:hover {
     color: #9c8967
-}
-#iniciar-sesion .bg{
-    background: url('../img/bg-body-login.png') repeat-y;
 }
 
 /* HOME - SLIDER - WIDGET */
