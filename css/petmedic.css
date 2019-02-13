@@ -1372,6 +1372,8 @@ li {
     margin-top: 105px;
     padding-top: 60px;
     padding-bottom: 110px;
+    position: relative;
+    z-index: 9;
 }
 
 #contactenos .fieldset {
@@ -1527,6 +1529,8 @@ li {
     margin-top: 105px;
     padding-top: 60px;
     padding-bottom: 110px;
+    position: relative;
+    z-index: 9;
 }
 
 #distribuidores .fieldset {
