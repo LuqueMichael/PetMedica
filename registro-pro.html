@@ -12,11 +12,13 @@
     <link rel="stylesheet" href="css/petmedic.css">
 
     <title>PetMedica</title>
+    <style>body{background: #f6f6f6 !important}</style>
 </head>
 
 <body>
-<!-- NAVBAR PRINCIPAL -->
-<nav id="navbar-principal" class="navbar navbar-expand-lg navbar-light bg-light large fixed-top">
+    <!-- NAVBAR PRINCIPAL -->
+   <!-- NAVBAR PRINCIPAL -->
+   <nav id="navbar-principal" class="navbar navbar-expand-lg navbar-light bg-light large fixed-top">
         <div class="container">
             <a class="navbar-logo" href="#"><img class="logo" src="img/logo-PNG.png" alt=""></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-support"
@@ -164,94 +166,117 @@
         </div>
     </div>
 
+    <section id="registro" class="container">
+        <div class="row fix-center">
+            <ul class="nav pages">
+                <li><a class="active" href="#step1">1</a></li>
+                <li><a href="#step2">2</a></li>
+            </ul>
+            <!--STEP 1-->
+            <div class="col-11 bg-white step1">
+                <div class="row">
+                    <div class="col-lg-5 pl-0">
+                        <div class="first-col">
+                            <h1>Registro</h1>
+                            <p>Petmedica® PRO es un espacio dirigido a profesionales veterinarios. Para acceder a los
+                                contenidos que te ofrecemos, completa el registro rellenando los siguientes datos.</p>
+                            <p>Muchas gracias.</p>
 
-    <section id="distribuidores" class="container">
-        <div class="row">
-            <div class="col-lg-12 pl-0 mr-5">
-                <h1>Distribuidores</h1>
-                <div class="mapa">
-                    <img src="img/mapa-grande.png" alt="">
-                </div>
-            </div>
-            <div class="col-lg-12 p-0">
-                <div class="card">
-                    <div class="card-body">
-                        <form action="" class="row">
-                            <div class="form-group col-lg-3">
-                                <label>Seleccione Continente</label>
-                                <select type="text" class="form-control">
-                                    <option value="0">America</option>
-                                    <option value="0">Sudrafrica</option>
-                                </select>
-                            </div>
-                            <div class="form-group col-lg-3">
-                                <label>País</label>
-                                <select type="text" class="form-control">
-                                    <option value="0">Peru</option>
-                                    <option value="0">Argentina</option>
-                                </select>
-                            </div>
-                            <div class="form-group col-lg-3">
-                                <label>Departamento</label>
-                                <select type="text" class="form-control">
-                                    <option value="0">Lima</option>
-                                    <option value="0">Tacna</option>
-                                </select>
-                            </div>
-                            <div class="form-group col-lg-3">
-                                <label>Ciudad</label>
-                                <select type="text" class="form-control">
-                                    <option value="0">San Luis</option>
-                                    <option value="0">San Juan de Miraflores</option>
-                                </select>
-                            </div>
-                        </form>
+                        </div>
                     </div>
-                </div>
-            </div>
-
-            <div class="col-lg-12 p-0">
-                <h4 class="title">Distribuidor</h4>
-
-                <div class="container">
-                    <div class="distribuidores-contenedor row">
-                        <!-- ITEM -->
-                        <div class="col-12 item">
-                            <ul>
-                                <h1>Agricare S.A.C.</h1>
-
-                                <li>Av. Canadá 3786 - San Luis - Lima -Perú</li>
-                                <li>Teléfono: <span class="text-blue">(51 1) 986 924 640</span></li>
-                                <li>Correo: <span class="text-blue">ventas@agricareperu.com</span></li>
-                                <li>Contacto: Nombre de la persona</li>
-                            </ul>
-                        </div>
-                        <!-- ITEM -->
-                        <div class="col-12 item">
-                            <ul>
-                                <h1>Codivet S.A.C.</h1>
-
-                                <li>Av. Canadá 3786 - San Luis - Lima -Perú</li>
-                                <li>Teléfono: <span class="text-blue">(51 1) 986 924 640</span></li>
-                                <li>Correo: <span class="text-blue">ventas@agricareperu.com</span></li>
-                                <li>Contacto: Nombre de la persona</li>
-                            </ul>
-                        </div>
-                        <!-- ITEM -->
-                        <div class="col-12 item">
-                            <ul>
-                                <h1>F&F Consorcio Veterinario S.A.C.</h1>
-
-                                <li>Av. Canadá 3786 - San Luis - Lima -Perú</li>
-                                <li>Teléfono: <span class="text-blue">(51 1) 986 924 640</span></li>
-                                <li>Correo: <span class="text-blue">ventas@agricareperu.com</span></li>
-                                <li>Contacto: Nombre de la persona</li>
-                            </ul>
+                    <div class="col-lg-4 p-0 ml-5">
+                        <div class="second-col">
+                            <h1>Datos</h1>
+                            <form class="row form" action="investigaciones-pro.html" method="post">
+                                <label class="col-10 fieldset">Datos de la Cuenta</label>
+                                <div class="form-group col-12">
+                                    <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Email">
+                                </div>
+                                <div class="form-group col-12">
+                                    <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Confirmar Email">
+                                </div>
+                                <div class="form-group col-12">
+                                    <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Contraseña">
+                                </div>
+                                <div class="form-group col-12">
+                                    <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Confirmar contraseña">
+                                </div>
+                                <br />
+                                <div class="col-12">
+                                    <a class="btn btn-default btn-next">Seguir</a>
+                                    <br>
+                                    <a href="#" class="link">¿Olvidaste tu cuenta?</a>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <!--STEP 2-->
+            <div class="col-10 bg-white step2 pl-5">
+                <div class="row">
+                    <!--COL-->
+                    <div class="col-lg-4 p-0 ml-5">
+                        <div class="second-col">
+                            <h1>Datos</h1>
+                            <form class="row form" action="investigaciones-pro.html" method="post">
+                                <label class="col-10 fieldset">Datos personales</label>
+                                <div class="form-group col-12">
+                                    <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Nombres">
+                                </div>
+                                <div class="form-group col-12">
+                                    <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Apellidos">
+                                </div>
+                                <div class="form-group col-12">
+                                    <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Teléfono">
+                                </div>
+                                <div class="form-group col-12">
+                                    <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Fecha de Nacimiento">
+                                </div>
+                                <div class="form-group col-12">
+                                    <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Pais/Ciudad">
+                                </div>
+                                <br />
+                            </form>
+                        </div>
+                    </div>
+                    <!--COL-->
+                    <div class="col-lg-5 p-0 ml-5 pl-5">
+                        <div class="second-col mt-5 pt-4">
+                            <h1> </h1>
+                            <form class="row form" action="investigaciones-pro.html" method="post">
+                                <label class="col-10 fieldset">Datos profesionales</label>
+                                <div class="form-group col-12">
+                                    <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Especialidad">
+                                </div>
+                                <div class="form-group col-12">
+                                    <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Centro de trabajo">
+                                </div>
+                                <div class="form-group col-12">
+                                    <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="N° Colegiatura">
+                                </div>
+                                <div class="form-group col-6">
+                                    <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Captcha">
+                                </div>
+                                <div class="form-group col-6">
+                                    <img src="img/captcha.png" alt="">
+                                </div>
+                                <div class="checkboxes">
+                                    <label class="customcheck col-12">He leído y acepto la <a href="#" class="terminos">politica de privacidad</a>
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <br />
+                                <div class="col-12">
+                                    <button type="button" class="btn btn-default btn-submit float-right">Registrar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
