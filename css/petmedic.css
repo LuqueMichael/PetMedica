@@ -574,7 +574,6 @@ body {
     font-size: 14px;
     width: 175px;
     background: url('../img/arrow-left.png') no-repeat left;
-    opacity: 0;
     transition: ease-in-out all .2s;    
 }
 #main.home .widget .btn-prev:hover { background: url('../img/arrow-left-h.png') no-repeat left; }
@@ -1251,6 +1250,7 @@ li {
 #footer {
     background-color: #333333;
     position: relative;
+    letter-spacing: .23px;
 }
 
 #footer.pro {
@@ -1326,7 +1326,7 @@ li {
     font-family: 'helvetica-roman';
     color: #f3f3f3;
     font-size: 12.5px;
-    padding: 30px 0;
+    padding: 30px 0;    
 }
 /*
 #footer ul li::first-letter {
@@ -2066,6 +2066,7 @@ li {
     height: 190px;
     position: relative;
     z-index: 2;
+    margin-top: 150px;
 }
 #ofertas .suscribe {
     /*margin-top: 50px;*/
@@ -2119,6 +2120,26 @@ li {
 }*/
 .productos-destacados .carousel-item {
     height: auto !important;
+}
+.productos-destacados .next,
+.productos-destacados .prev{
+    opacity: 0;
+    position: relative;
+    z-index: -1;
+    transition: ease-in-out all .3s;
+}
+.productos-destacados .next.show,
+.productos-destacados .prev.show{
+    opacity: 1;
+    position: relative;
+    z-index: 1;
+    transition: ease-in all .3s;
+}
+i.copy {
+    font-size: 8px;
+    position: relative;
+    top: -5px;
+    font-style: initial;
 }
 /*
 .carousel-item,
