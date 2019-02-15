@@ -208,21 +208,24 @@ $(function () {
         return false;
     });
 
-    $('#productos-destacados').on('slide.bs.carousel', function (e) {
-        /*currentIndex += 1; 
-        if(currentIndex <= 1){
-            $(this).find('.btn-prev').removeAttr('style');  
-        }else{
-            //show prev button
-            $(this).find('.btn-prev').css({'opacity':'1'});  
-        }*/
 
+    /*
+        EVENTO CAPTURA DE URL  - DEMO
+    */
+    var url_string = window.location.href;
+    var url = new URL(url_string);
+    var c = url.searchParams.get("e");
+    $('#form-registro-step1').find('.email').val(c);
+    $('#unirse-form').on('submit',function(){
         
-
+        $('<input />').attr('type', 'hidden')
+          .attr('name', "e")
+          .attr('value', $('#ofertas').find('.input-suscribe').val())
+          .appendTo('#unirse-form');
+      return true;
     });
-
-
 });
+
 
 function toggleSliderControls(){
     setTimeout(function(){
