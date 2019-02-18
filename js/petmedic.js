@@ -157,6 +157,10 @@ $(function () {
                 $elem.addClass('show');
             }
         } else {
+            //TRY-CATCH
+            if(sectionTo == undefined || sectionTo.length < 2){
+                return true;
+            }
             var position = $(sectionTo).offset().top;
             if (sectionTo == '#main') {
                 position -= 80;
@@ -209,10 +213,14 @@ $(function () {
     });
 
     var $videoSrc;
-    $('.video-btn').click(function () {
-        $videoSrc = $(this).data("src");
+    $('.video-btn').on('click',function () {
+        $videoSrc = $(this).data("src");        
     });
-    $('#video-modal').on('shown.bs.modal', function (e) {
+    //FIX PRODUCT-DETAIL
+    $('#video-btn').on('click',function () {
+        $videoSrc = $(this).data("src");        
+    });
+    $('#video-modal').on('shown.bs.modal', function (e) {   
         $("#video").attr('src', $videoSrc + "?rel=0&amp;showinfo=0&amp;modestbranding=1&amp;autoplay=1");
     })
     $('#video-modal').on('hide.bs.modal', function (e) {
