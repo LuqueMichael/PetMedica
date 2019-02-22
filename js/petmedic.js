@@ -103,7 +103,9 @@ $(function () {
     });
 
     //FILTER NAV
-    $("#nav-lvl-1").find('a').on("mouseover", function () {
+    $("#nav-lvl-1").find('a').on("mouseover", function () {      
+        //set active item
+        $("#nav-lvl-1").find('a').removeClass('active');$(this).addClass('active');  
         var value = $(this).attr('data-target');
         /*$('#nav-lvl-1').find('a').parent().removeClass('active');
         $(this).addClass('active');*/
@@ -123,6 +125,8 @@ $(function () {
         }
     });
     $("#nav-lvl-2").find('a').on("mouseover", function () {
+        //set active item
+        $("#nav-lvl-2").find('a').removeClass('active');$(this).addClass('active');
         var value = $(this).attr('data-target');
         /*$('#nav-lvl-2').find('a').parent().removeClass('active');
         $(this).addClass('active');*/
@@ -172,8 +176,8 @@ $(function () {
     });
 
     //NAVIGATION CONTROLS IN REGISTER FORM
-    $('#registro').find('.pages').on('click', 'a', function () {
-        $(this).closest('.pages').find('a').removeClass('active');
+    /*$('#registro').find('.pages').on('click', 'li', function () {
+        $(this).closest('.pages').find('li').removeClass('active');
         $(this).addClass('active');
         var step = $(this).attr('href').substring(1);
         if (step == 'step2') {
@@ -185,30 +189,46 @@ $(function () {
             $('#registro').find('.step1').removeAttr('style');
             $('#registro').find('.step2').removeClass('show');
         }
-    });
+    });*/
     $('#registro').find('.btn-next').on('click', function () {
-        $('#registro').find('.pages').find('a').removeClass('active');
-        $('#registro').find('.pages').find('a[href="#step2"]').addClass('active');
+        $('#registro').find('.pages').find('li').removeClass('active');
+        $('#registro').find('.pages').find('li').last().addClass('active');
         $('#registro').find('.step1').css({
             'margin-left': '-75rem'
         })
         $('#registro').find('.step2').addClass('show');
     });
 
-    //SLIDER CONTROL     
+    //SLIDER CONTROL PRODUCTOS DESTACADOS
     $('#productos-destacados').carousel({
         wrap: false,
         interval: false
     });
     // Control buttons
     $('#productos-destacados .next').click(function () {
-        $('.carousel').carousel('next');
-        toggleSliderControls();
+        $('#productos-destacados').carousel('next');
+        toggleSliderControls($('#productos-destacados'));
         return false;
     });
     $('#productos-destacados .prev').click(function () {
-        $('.carousel').carousel('prev');
-        toggleSliderControls();
+        $('#productos-destacados').carousel('prev');
+        toggleSliderControls($('#productos-destacados'));
+        return false;
+    });
+    //SLIDER CONTROL  PRODUCTOS NUEVOS   
+    $('#nuevos-productos').carousel({
+        wrap: false,
+        interval: false
+    });
+    // Control buttons
+    $('#nuevos-productos .next').click(function () {
+        $('#nuevos-productos').carousel('next');
+        toggleSliderControls($('#nuevos-productos'));
+        return false;
+    });
+    $('#nuevos-productos .prev').click(function () {
+        $('#nuevos-productos').carousel('prev');
+        toggleSliderControls($('#nuevos-productos'));
         return false;
     });
 
@@ -245,17 +265,17 @@ $(function () {
 });
 
 
-function toggleSliderControls() {
+function toggleSliderControls($context) {
     setTimeout(function () {
-        if ($('#productos-destacados').find('.carousel-inner .carousel-item:first').hasClass('active')) {
-            $('#productos-destacados').find('.prev').removeClass('show');
-            $("#productos-destacados").find('.next').addClass('show');
-        } else if ($('#productos-destacados').find('.carousel-inner .carousel-item:last').hasClass('active')) {
-            $("#productos-destacados").find('.prev').addClass('show');
-            $('#productos-destacados').find('.next').removeClass('show');
+        if ($context.find('.carousel-inner .carousel-item:first').hasClass('active')) {
+            $context.find('.prev').removeClass('show');
+            $context.find('.next').addClass('show');
+        } else if ($context.find('.carousel-inner .carousel-item:last').hasClass('active')) {
+            $context.find('.prev').addClass('show');
+            $context.find('.next').removeClass('show');
         } else {
-            $("#productos-destacados").find('.prev').addClass('show');
-            $("#productos-destacados").find('.next').addClass('show');
+            $context.find('.prev').addClass('show');
+            $context.find('.next').addClass('show');
         }
     }, 600);
 }
