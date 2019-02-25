@@ -1803,7 +1803,9 @@ li {
 }
 
 #contactenos input.form-control,
-#contactenos textarea.form-control {
+#contactenos textarea.form-control,
+#contactenos select.form-control,
+#contactenos option.form-control {
     border: 1px solid #d8d8d8;
     border-radius: 0;
     color: #9c9c9c;
@@ -1812,8 +1814,25 @@ li {
 }
 
 #contactenos input.form-control::placeholder,
-#contactenos textarea.form-control::placeholder {
+#contactenos textarea.form-control::placeholder ,
+#contactenos option.form-control:hover{
     color: #b7b7b7;
+}
+#contactenos select.form-control{
+    -moz-appearance:none;
+	-webkit-appearance:none;
+	-ms-appearance:none;
+	-o-appearance:none;
+    appearance:none;
+    position: realtive;
+    background: url("../img/form-select-arrow.png") no-repeat top 12px right 12px;
+    background-size:15px;
+    transition: ease-in-out .2s all;
+}
+#contactenos select.form-control:focus{
+    background: url("../img/form-select-arrow-up.png") no-repeat top 12px right 12px;
+    background-size:16px;
+    transition: ease-in .2s all;
 }
 
 #contactenos .checkboxes {
