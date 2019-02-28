@@ -1,5 +1,13 @@
 $(function () {
 
+    //$('.jquery-background-video').bgVideo({fadeIn: 2000});
+
+    //Logout-Button in Home-Pro
+    $('#navbar-pro .btn_chev').on('click',function(){
+        $(this).toggleClass('active');
+        $('#navbar-pro .log-out').toggleClass('show');
+    });
+
     //ALTERNATE MENU LARGE OR SMALL ON SCROLL
     $(document).on("scroll", function () {
         if ($(document).scrollTop() > 100) {
