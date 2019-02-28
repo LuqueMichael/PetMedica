@@ -817,6 +817,24 @@ body {
 #main.pro .card.video .card-body {
     padding: 55px 0 10px 0;
 }
+/* POST INDIVIDUAL DE LA NOTICIA */
+#main.entrada {
+    margin-top: 100px;
+}
+#main.entrada .noticias .noticia .card-title{
+    font-family: 'helvetica-bold';
+    font-size: 34.5px;
+    color: #333333;
+}
+#main.entrada .noticias .noticia p{
+    font-family: 'helvetica-light';
+    font-size: 15.3px;
+    color: #0a0a0a;
+}
+#main.entrada .noticias .noticia .content{
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
 
 #main.pro .card.video i.copy {
     font-size: 12px;
