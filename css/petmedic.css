@@ -197,6 +197,7 @@ body {
     transition: ease-in-out .2s transform;
     transition-delay: .1s;
 }
+
 #main .lista-productos i.copy {
     font-size: 13px !important;
 }
@@ -227,7 +228,7 @@ body {
 }
 
 #main .card-body h5.card-title,
-#main .card-body a.card-title{
+#main .card-body a.card-title {
     font-family: 'helvetica-bold';
     font-size: 20px;
     color: #000;
@@ -799,17 +800,40 @@ body {
 #main .submenu ul.nav li a.nav-link:before {
     left: 0px;
 }
-#main .noticias .card.noticia ,
+
+#main .noticias .card.noticia,
 #main.pro .card.video {
     padding: 0;
     margin-bottom: 100px;
     border: 0;
     border-bottom: 1px solid #a5a6a6;
 }
-#main .noticias .card.noticia{ margin-bottom: 0 !important }
+
+#main .noticias .card.noticia {
+    margin-bottom: 0 !important
+}
+
 #main .noticias .card.noticia .card-body,
 #main.pro .card.video .card-body {
     padding: 55px 0 10px 0;
+}
+/* POST INDIVIDUAL DE LA NOTICIA */
+#main.entrada {
+    margin-top: 100px;
+}
+#main.entrada .noticias .noticia .card-title{
+    font-family: 'helvetica-bold';
+    font-size: 34.5px;
+    color: #333333;
+}
+#main.entrada .noticias .noticia p{
+    font-family: 'helvetica-light';
+    font-size: 15.3px;
+    color: #0a0a0a;
+}
+#main.entrada .noticias .noticia .content{
+    padding-top: 50px;
+    padding-bottom: 40px;
 }
 
 #main.pro .card.video i.copy {
@@ -862,16 +886,19 @@ body {
     font-size: 15.4px;
     font-family: 'helvetica-roman';
 }
-#main .noticias  .card .card-text ,
+
+#main .noticias .card .card-text,
 #main.pro.educacion .card .card-text {
     color: #333 !important;
 }
-#main .noticias .card .tags ,
+
+#main .noticias .card .tags,
 #main.pro.educacion .card .tags {
     color: #544b40;
     font-family: 'helvetica-light';
     font-size: 14px;
 }
+
 #main .noticias .card .tags li a,
 #main.pro.educacion .card .tags li a {
     color: #544b40;
@@ -886,7 +913,8 @@ body {
     background-size: 200% 100%;
     transition: all 0.25s ease-in;
 }
-#main .noticias .card .tags li a:hover ,
+
+#main .noticias .card .tags li a:hover,
 #main.pro.educacion .card .tags li a:hover {
     background-position: 0 0;
     color: #fff;
@@ -1293,6 +1321,7 @@ li {
 #submenu-productos-contenedor .iconos a.perro.active {
     background: url('../img/icon-perro-h.png') no-repeat;
 }
+
 #submenu-productos-contenedor .iconos a.gato {
     background: url('../img/icon-gato.png') no-repeat;
     padding: 15px 24px;
@@ -1401,6 +1430,7 @@ li {
     padding-right: 31px;
     margin-right: 25px;
     border-right: 1px solid #fff;
+    position: relative;
 }
 
 #navbar-pro ul li.nav-user a {
@@ -1430,6 +1460,35 @@ li {
     padding: 0;
     margin: 0;
     padding-top: 5px;
+}
+#navbar-pro .log-out {
+    position: absolute;
+    width: 68%;
+    text-align: center;
+    background: #846f51;
+    border-radius: 4px;
+    color: #ffffff;
+    padding: 5px 25px;
+    top: -2px;
+    left: 35px;
+    transform: translateY(3rem);
+    transition: ease-in-out all .3s;
+}
+#navbar-pro .log-out.show{
+    transform: translateY(0);
+    transition: ease-in all .3s;
+}
+#navbar-pro a.btn_chev {
+    padding: 12px 26px;
+    background: url(../img/nav-chevdown.png) no-repeat center;
+    float: right;
+    margin-right: -26px;
+}
+#navbar-pro a.btn_chev:hover {
+    background: url(../img/nav-chevdown-h.png) no-repeat center;
+}
+#navbar-pro a.btn_chev.active {
+    transform: rotate(-180deg);
 }
 
 #icon-plus.pro {
@@ -1754,12 +1813,12 @@ li {
     font-family: 'helvetica-roman';
     font-size: 14px;
     color: #868686;
-    margin-left: 23px;
+    margin-left: 4px;
     margin-bottom: 15px;
 }
 
 #contactenos .mapa {
-    padding-top: 23px;
+    padding-top: 2.8rem;
 }
 
 /*#contactenos .mapa img { width: 95%;}*/
@@ -1814,24 +1873,26 @@ li {
 }
 
 #contactenos input.form-control::placeholder,
-#contactenos textarea.form-control::placeholder ,
-#contactenos option.form-control:hover{
+#contactenos textarea.form-control::placeholder,
+#contactenos option.form-control:hover {
     color: #b7b7b7;
 }
-#contactenos select.form-control{
-    -moz-appearance:none;
-	-webkit-appearance:none;
-	-ms-appearance:none;
-	-o-appearance:none;
-    appearance:none;
+
+#contactenos select.form-control {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
     position: realtive;
     background: url("../img/form-select-arrow.png") no-repeat top 12px right 12px;
-    background-size:15px;
+    background-size: 15px;
     transition: ease-in-out .2s all;
 }
-#contactenos select.form-control:focus{
+
+#contactenos select.form-control:focus {
     background: url("../img/form-select-arrow-up.png") no-repeat top 12px right 12px;
-    background-size:16px;
+    background-size: 16px;
     transition: ease-in .2s all;
 }
 
@@ -1901,27 +1962,31 @@ li {
 }
 
 /********   FORTALECIENDO **********/
-.fortaleciendo .agrovet{
-    background: #f6f6f6;    
+.fortaleciendo .agrovet {
+    background: #f6f6f6;
     min-height: 350px;
 }
+
 .fortaleciendo .row {
     padding-top: 95px;
     padding-bottom: 60px;
 }
-.fortaleciendo h1{
+
+.fortaleciendo h1 {
     font-family: 'helvetica-bold';
     font-size: 36px;
     color: #333333;
     margin-bottom: 60px;
 }
-.fortaleciendo h2{
+
+.fortaleciendo h2 {
     font-family: 'helvetica-bold';
     font-size: 24px;
     color: #333333;
     margin-bottom: 30px;
 }
-.fortaleciendo p{
+
+.fortaleciendo p {
     font-family: 'helvetica-light';
     font-size: 15px;
     color: #0a0a0a;
@@ -2476,10 +2541,10 @@ li {
 
 #ofertas .suscribe h4 {
     font-family: 'helvetica-light';
-    font-size: 21px;
+    font-size: 18px;
     color: #333333;
     margin: 0;
-    padding-top: 3px;
+    margin-top: -12px;
     text-transform: uppercase;
 }
 
@@ -2537,13 +2602,15 @@ li {
     width: 106%;
     margin-left: -30px;
 }
+
 a.fix-href-product {
     padding: 2rem 8rem;
     position: absolute;
     z-index: 9999;
 }
+
 /* FIX HEIGHT DEFAUL BOOTSTRAP */
-#nuevos-productos .carousel-item{
+#nuevos-productos .carousel-item {
     height: auto !important;
 }
 
@@ -2553,6 +2620,7 @@ a.fix-href-product {
 .productos-destacados .carousel-item {
     height: auto !important;
 }
+
 .nuevos-productos .next,
 .nuevos-productos .prev,
 .productos-destacados .next,
@@ -2562,6 +2630,7 @@ a.fix-href-product {
     z-index: -1;
     transition: ease-in-out all .3s;
 }
+
 .nuevos-productos .next.show,
 .nuevos-productos .prev.show,
 .productos-destacados .next.show,
@@ -2571,18 +2640,21 @@ a.fix-href-product {
     z-index: 1;
     transition: ease-in all .3s;
 }
+
 i.copy {
     font-size: 8px;
     position: relative;
     top: -5px;
     font-style: initial;
 }
-.more{
+
+.more {
     font-family: 'helvetica-roman';
     font-size: 14px;
     color: #8D704F;
 }
-.more:hover{
+
+.more:hover {
     color: rgb(88, 69, 46);
 }
 
@@ -2600,7 +2672,7 @@ i.copy {
 
 #video-modal .modal-body {
     position: relative;
-    padding: 0px;    
+    padding: 0px;
     background: #000;
 }
 
@@ -2622,6 +2694,41 @@ i.copy {
     opacity: 1;
     transform: scale(1);
 }
+
+/* VIDEO SLIDER BACKGROUND */
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+    background: url("../media/video_preview.png") left top repeat;
+    opacity: 0;
+}
+.jquery-background-video-wrapper {
+    /*position: relative;*/
+    overflow: hidden;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .jquery-background-video {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    -o-object-fit: contain;
+    object-fit: contain;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+    
 
 /*
 .carousel-item,
