@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
         crossorigin="anonymous">
     <link rel="stylesheet" href="css/petmedic.css">
+    <link rel="stylesheet" href="css/animate.css">
 
     <title>PetMedica</title>
     <style>body{background: #f6f6f6}</style>
@@ -132,7 +133,7 @@
 
     <section id="iniciar-sesion" class="container">
         <div class="row">
-            <div class="col-10 bg-white offset-lg-1">
+            <div class="col-10 bg-white offset-lg-1 wow fadeInUp">
                     <div class="row">
                             <div class="col-lg-5 pl-0">
                                 <div class="first-col">
@@ -168,7 +169,7 @@
                                         </div>
                                         <br/>
                                         <div class="col-12">
-                                                <button type="submit" class="btn btn-default btn-submit">Iniciar sesión</button>
+                                                <button type="button" class="btn btn-default btn-submit ripple"><i class="chev-r">></i> &nbsp;Iniciar sesión</button>
                                                 <br>
                                                 <a href="#" class="link">¿Olvidaste tu cuenta?</a>
                                         </div>
@@ -246,6 +247,10 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
+        <script src="js/wow.min.js"></script>
+        <script>
+            new WOW().init();
+        </script>
     <script src="js/petmedic.js"></script>
 </body>
 

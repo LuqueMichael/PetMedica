@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
         crossorigin="anonymous">
     <link rel="stylesheet" href="css/petmedic.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
 
     <title>PetMedica</title>
     <style>body{background: #f6f6f6 !important}</style>
@@ -168,14 +171,14 @@
 
     <section id="registro" class="container">
         <div class="row fix-center">
-            <ul class="nav pages">
+            <ul class="nav pages wow flipInY" data-wow-delay=".6s">
                 <li class="active">1</li>
                 <li>2</li>
             </ul>
             <!--STEP 1-->
             <div class="col-11 bg-white step1">
                 <div class="row">
-                    <div class="col-lg-5 pl-0">
+                    <div class="col-lg-5 pl-0 wow fadeInLeft">
                         <div class="first-col">
                             <h1>Registro</h1>
                             <p>Petmedica® PRO es un espacio dirigido a profesionales veterinarios. Para acceder a los
@@ -184,12 +187,12 @@
 
                         </div>
                     </div>
-                    <div class="col-lg-4 p-0 ml-5">
+                    <div class="col-lg-4 p-0 ml-5 wow fadeInRight">
                         <div class="second-col">
                             <h1>Datos</h1>
                             <form id="form-registro-step1" class="row form" action="investigaciones-pro.html" method="post">
                                 <label class="col-10 fieldset">Datos de la Cuenta</label>
-                                <div class="form-group col-12">
+                                <div class="form-group col-12 log-status">
                                     <input type="text" class="form-control email" aria-describedby="emailHelp" placeholder="Email">
                                 </div>
                                 <div class="form-group col-12">
@@ -203,7 +206,7 @@
                                 </div>
                                 <br />
                                 <div class="col-12">
-                                    <a class="btn btn-default btn-next">Seguir</a>
+                                    <a class="btn btn-default btn-next ripple log-btn">Seguir</a>
                                     <br>
                                     <a href="#" class="link">¿Olvidaste tu cuenta?</a>
                                 </div>
@@ -350,6 +353,10 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
+        <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
     <script src="js/petmedic.js"></script>
 </body>
 

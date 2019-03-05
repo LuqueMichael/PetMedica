@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
         crossorigin="anonymous">
     <link rel="stylesheet" href="css/petmedic.css">
+    <link rel="stylesheet" href="css/animate.css">
 
     <title>PetMedica</title>
 </head>
@@ -169,7 +170,7 @@
     <section id="contactenos" class="container">
         <div class="row">
             <div class="col-lg-6 pl-0 mr-5">
-                <div class="menu">
+                <div class="menu  wow fadeInDown">
                     <ul>
                         <h1>Contáctenos</h1>
 
@@ -178,12 +179,12 @@
                         <li class="icon_telef"><span class="text">(511) 2300 300</span></li>
                     </ul>
                 </div>
-                <div class="mapa">
+                <div class="mapa wow bounceInUp" data-wow-delay=".6s">
                     <img src="img/contact-mapa.png" alt="">
                 </div>
             </div>
             <div class="col-lg-5 p-0">
-                <form class="row">
+                <form class="row wow fadeInRight" data-wow-delay="1.3s">
 
                     <label class="col-12 fieldset">Información personal</label>
 
@@ -254,7 +255,7 @@
                         </label>
                     </div>
 
-                    <button type="submit" class="btn btn-default btn-submit">Enviar</button>
+                    <button type="button" class="btn btn-default btn-submit ripple"> <i class="chev-r">></i> Enviar</button>
                 </form>
             </div>
         </div>
@@ -331,6 +332,10 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
+        <script src="js/wow.min.js"></script>
+        <script>
+            new WOW().init();
+        </script>
     <script src="js/petmedic.js"></script>
 </body>
 

@@ -1,9 +1,16 @@
 $(function () {
 
-    //$('.jquery-background-video').bgVideo({fadeIn: 2000});
+    //ANIMATIONS
+    $('#banner').find('.carousel-caption').on('mouseover', function () {
+        $('#banner').find('.overlay-slid').addClass('overlay-slide-h');
+        $('#banner').find('.jquery-background-video').addClass('jquery-background-video-h');
+    }).on('mouseleave', function () {
+        $('#banner').find('.overlay-slid').removeClass('overlay-slide-h');
+        $('#banner').find('.jquery-background-video').removeClass('jquery-background-video-h');
+    });
 
     //Logout-Button in Home-Pro
-    $('#navbar-pro .btn_chev').on('click',function(){
+    $('#navbar-pro .btn_chev').on('click', function () {
         $(this).toggleClass('active');
         $('#navbar-pro .log-out').toggleClass('show');
     });
@@ -29,22 +36,20 @@ $(function () {
         }
     });
 
-    //SHOW SUBMENU PRODUCTS
-    /*$('#submenu-productos').on('mouseover', function () {
-        $('#submenu-petmedicapro-contenedor').removeClass('show');
-        $('#submenu-productos-contenedor').addClass('show');
+    // ===== Scroll to Top ==== 
+    $(window).scroll(function () {
+        if ($(this).scrollTop() >= 50) {
+            $('#return-to-top').fadeIn(200);
+        } else {
+            $('#return-to-top').fadeOut(200);
+        }
     });
-    $('#submenu-productos-contenedor').on('mouseleave', function () {
-        $('#submenu-productos-contenedor').removeClass('show');
+    $('#return-to-top').click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 500);
     });
-    //SHOW SUBMENU PETMEDICAPRO
-    $('#submenu-petmedicapro').on('mouseover', function () {
-        $('#submenu-productos-contenedor').removeClass('show');
-        $('#submenu-petmedicapro-contenedor').addClass('show');
-    });
-    $('#submenu-petmedicapro-contenedor').on('mouseleave', function () {
-        $('#submenu-petmedicapro-contenedor').removeClass('show');
-    });*/
+
     $('#navbar-principal').find('ul > li').children().on('mouseover', function () {
         var nav = $(this).attr('data-type');
         /*$('#submenu-petmedicapro-contenedor').removeClass('show');
@@ -111,9 +116,10 @@ $(function () {
     });
 
     //FILTER NAV
-    $("#nav-lvl-1").find('a').on("mouseover", function () {      
+    $("#nav-lvl-1").find('a').on("mouseover", function () {
         //set active item
-        $("#nav-lvl-1").find('a').removeClass('active');$(this).addClass('active');  
+        $("#nav-lvl-1").find('a').removeClass('active');
+        $(this).addClass('active');
         var value = $(this).attr('data-target');
         /*$('#nav-lvl-1').find('a').parent().removeClass('active');
         $(this).addClass('active');*/
@@ -134,7 +140,8 @@ $(function () {
     });
     $("#nav-lvl-2").find('a').on("mouseover", function () {
         //set active item
-        $("#nav-lvl-2").find('a').removeClass('active');$(this).addClass('active');
+        $("#nav-lvl-2").find('a').removeClass('active');
+        $(this).addClass('active');
         var value = $(this).attr('data-target');
         /*$('#nav-lvl-2').find('a').parent().removeClass('active');
         $(this).addClass('active');*/
@@ -153,7 +160,7 @@ $(function () {
         }
     });
     //Dividir en caso sean demasiado (>14) items
-    if( $("#nav-lvl-3").find('li').length > 14 ){
+    if ($("#nav-lvl-3").find('li').length > 14) {
         var $items = $("#nav-lvl-3").find('li');
         for (var indx = 14; indx <= $items.length; indx++) {
             console.log($items[indx]);
@@ -178,7 +185,7 @@ $(function () {
             }
         } else {
             //TRY-CATCH
-            if(sectionTo == undefined || sectionTo.length < 2){
+            if (sectionTo == undefined || sectionTo.length < 2) {
                 return true;
             }
             var position = $(sectionTo).offset().top;
@@ -189,6 +196,17 @@ $(function () {
                 scrollTop: position
             }, 1000);
         }
+    });
+    $('.nav-link[href="#share-buttons"]').on('mouseover', function () {
+        var $elem = $(this).parent().find('.bubble');
+        $elem.show();
+        $elem.addClass('show');
+    }).next().on('mouseleave', function () {
+        var $elem = $(this).parent().find('.bubble');
+        $elem.removeClass('show');
+        setTimeout(function () {
+            $elem.hide()
+        }, 500);
     });
 
     //NAVIGATION CONTROLS IN REGISTER FORM
@@ -207,12 +225,17 @@ $(function () {
         }
     });*/
     $('#registro').find('.btn-next').on('click', function () {
+
+        $('.log-status').addClass('wrong-entry');
+       $('.alert').fadeIn(500);
+       setTimeout( "$('.alert').fadeOut(1500);",3000 );
+/*
         $('#registro').find('.pages').find('li').removeClass('active');
         $('#registro').find('.pages').find('li').last().addClass('active');
         $('#registro').find('.step1').css({
             'margin-left': '-75rem'
         })
-        $('#registro').find('.step2').addClass('show');
+        $('#registro').find('.step2').addClass('show');*/
     });
 
     //SLIDER CONTROL PRODUCTOS DESTACADOS
@@ -249,19 +272,20 @@ $(function () {
     });
 
     var $videoSrc;
-    $('.video-btn').on('click',function () {
-        $videoSrc = $(this).data("src");        
+    $('.video-btn').on('click', function () {
+        $videoSrc = $(this).data("src");
     });
     //FIX PRODUCT-DETAIL
-    $('#video-btn').on('click',function () {
-        $videoSrc = $(this).data("src");        
+    $('#video-btn').on('click', function () {
+        $videoSrc = $(this).data("src");
     });
-    $('#video-modal').on('shown.bs.modal', function (e) {   
+    $('#video-modal').on('shown.bs.modal', function (e) {
         $("#video").attr('src', $videoSrc + "?rel=0&amp;showinfo=0&amp;modestbranding=1&amp;autoplay=1");
     })
     $('#video-modal').on('hide.bs.modal', function (e) {
         $("#video").attr('src', $videoSrc);
     })
+
 
     /*
         EVENTO CAPTURA DE URL  - DEMO
@@ -297,9 +321,9 @@ function toggleSliderControls($context) {
 }
 
 function isElementVisible(elem) {
-    let viewScrollTop = $(window).scrollTop(); // distancia de scroll superior
-    let viewBottom = viewScrollTop + $(window).height(); // distancia de scroll + el alto actual de window (lo no visible por scroll + lo visible)
-    let topElemD = $(elem).offset().top; // distancia desde el elemento hasta el tope superior del viewport
+    var viewScrollTop = $(window).scrollTop(); // distancia de scroll superior
+    var viewBottom = viewScrollTop + $(window).height(); // distancia de scroll + el alto actual de window (lo no visible por scroll + lo visible)
+    var topElemD = $(elem).offset().top; // distancia desde el elemento hasta el tope superior del viewport
     return (topElemD < viewBottom);
 }
 
@@ -307,6 +331,6 @@ function isElementVisible(elem) {
  * @param1 ID DIV
  * @param2 items
  */
-function toMuchItems($param1, $param2){
-    
+function toMuchItems($param1, $param2) {
+
 }

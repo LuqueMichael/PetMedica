@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
         crossorigin="anonymous">
     <link rel="stylesheet" href="css/petmedic.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
 
     <title>PetMedica</title>
 </head>
@@ -125,7 +129,7 @@
                         <li><a href="producto-detalle.html" data-parent="nutricionales" class="nav-link">Petonic<i
                                     class="copy">®</i>
                                 Recuperation</a></li>
-                       
+
                     </ul>
 
                 </div>
@@ -191,22 +195,43 @@
             <div class="carousel-inner" role="listbox">
                 <!-- Slide One - Set the background image for this slide in the line below -->
                 <div class="carousel-item active">
+                    <div class="overlay-slid"></div>
+                    <div class="carousel-caption d-none d-md-block wow fadeInLeftBig">
+                        <h2 class="display-4">Fortaleciendo Vínculos</h2>
+                        <p class="lead">Una innovadora línea de fármacos orientada a promover la salud y bienestar de
+                            las mascotas.</p>
+                    </div>
                     <!-- Start video hero -->
                     <div class="video-hero jquery-background-video-wrapper">
                         <video class="jquery-background-video" autoplay muted loop poster="media/video_preview.png">
-                            <source src="media/perro_y_dueño.mp4"
-                                type="video/mp4">
-                            <source src="media/perro_y_dueño.webm"
-                                type="video/webm">
-                            <source src="media/perro_y_dueño_ver2.ogv"
-                                type="video/ogg">
+                            <source src="media/perro_y_veterinario.mp4" type="video/mp4">
+                            <source src="media/perro_y_veterinario.webm" type="video/webm">
+                            <source src="media/perro_y_veterinario.ogv" type="video/ogg">
+                        </video>
+                    </div>
+                    <!-- End video hero -->
+                </div>
+                <!-- Slide One - Set the background image for this slide in the line below -->
+                <div class="carousel-item">
+                    <div class="overlay-slid"></div>
+                    <div class="carousel-caption d-none d-md-block wow fadeInLeftBig">
+                        <h2 class="display-4">Fortaleciendo Vínculos</h2>
+                        <p class="lead">Una innovadora línea de fármacos orientada a promover la salud y bienestar de
+                            las mascotas.</p>
+                    </div>
+                    <!-- Start video hero -->
+                    <div class="video-hero jquery-background-video-wrapper">
+                        <video class="jquery-background-video" autoplay muted loop poster="media/video_preview.png">
+                            <source src="media/perro_y_veterinario_ver3.mp4" type="video/mp4">
+                            <source src="media/perro_y_veterinario.webm" type="video/webm">
+                            <source src="media/perro_y_veterinario.ogv" type="video/ogg">
                         </video>
                     </div>
                     <!-- End video hero -->
                 </div>
                 <!-- Slide One - Set the background image for this slide in the line below -->
                 <div class="carousel-item" style="background-image: url('img/slider/slider-1.png')">
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption d-none d-md-block wow fadeInLeftBig">
                         <h2 class="display-4">Fortaleciendo Vínculos</h2>
                         <p class="lead">Una innovadora línea de fármacos orientada a promover la salud y bienestar de
                             las mascotas.</p>
@@ -214,7 +239,7 @@
                 </div>
                 <!-- Slide Two - Set the background image for this slide in the line below -->
                 <div class="carousel-item" style="background-image: url('img/slider/slider-2.png')">
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption d-none d-md-block wow fadeInLeftBig">
                         <h2 class="display-4">Fortaleciendo Vínculos</h2>
                         <p class="lead">Una innovadora línea de fármacos orientada a promover la salud y bienestar de
                             las mascotas.</p>
@@ -222,7 +247,7 @@
                 </div>
                 <!-- Slide Three - Set the background image for this slide in the line below -->
                 <div class="carousel-item" style="background-image: url('img/slider/slider-3.png')">
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption d-none d-md-block wow fadeInLeftBig">
                         <h2 class="display-4">Fortaleciendo Vínculos</h2>
                         <p class="lead">Una innovadora línea de fármacos orientada a promover la salud y bienestar de
                             las mascotas.</p>
@@ -849,6 +874,8 @@
         </div>
     </footer>
 
+    <a href="javascript:" id="return-to-top"><img src="img/chevron-up.png" alt=""></a>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
@@ -858,6 +885,10 @@
         crossorigin="anonymous"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery.background-video.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
     <script src="js/petmedic.js"></script>
 </body>
 
