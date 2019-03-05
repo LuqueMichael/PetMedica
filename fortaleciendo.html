@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
         crossorigin="anonymous">
     <link rel="stylesheet" href="css/petmedic.css">
+    <link rel="stylesheet" href="css/animate.css">
 
     <title>PetMedica</title>
 </head>
@@ -179,7 +180,7 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-6 mt-5">
+                <div class="col-6 mt-5 pl-0 wow bounceInLeft" data-wow-delay=".5s">
                     <h1>Fortaleciendo Vínculos</h1>
                     <p>Hoy más que nunca, las mascotas ocupan un lugar privilegiado en la familia, desarrollándose
                         entre éstas y sus dueños un vínculo emocional que dura toda una vida.</p>
@@ -195,7 +196,7 @@
                         para ayudar a tus pacientes a vivir mejor y por más tiempo.
                     </p>
                 </div>
-                <div class="col-6">
+                <div class="col-6 pr-0 wow bounceInDown">
                     <img src="img/fortaleciendo-thumb.png" class="img w-100" alt="">
                 </div>
             </div>
@@ -205,10 +206,10 @@
             <div class="container">
                 <div class="row align-items-center h-100">
                     <div class="col-6 text-center">
-                        <img src="img/logo_agrovet.png" alt="">
-                        <p class="text-center mt-3">Productos Veterinarios de Clase Única</p>
+                        <img class="wow flipInX" src="img/logo_agrovet.png" alt="">
+                        <p class="text-center mt-3 wow fadeInUp" data-wow-delay=".5s">Productos Veterinarios de Clase Única</p>
                     </div>
-                    <div class="col-6">
+                    <div class="col-6 pr-0 wow bounceInRight" data-wow-delay=".9s">
                         <h2>Agrovet Market Animal Health</h2>
                         <p>
                             El desarrollo de nuestro portafolio y su registro en diferentes países se basa en la
@@ -227,10 +228,10 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-6">
+                <div class="col-6 pl-0 wow bounceInUp">
                     <img src="img/fortaleciendo-thumb2.png" class="img w-100" alt="">
                 </div>
-                <div class="col-6 mt-5">
+                <div class="col-6 mt-5 pr-0 wow bounceInRight" data-wow-delay=".5s">
                     <h2>Nuestra Misión</h2>
                     <p>Ofrecer productos farmacéuticos y nutricionales veterinarios de clase única; desarrollados de
                         manera creativa e innovadora, con estándares elevados de calidad que nos permitan una
@@ -323,6 +324,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
     <script src="js/petmedic.js"></script>
 </body>
 

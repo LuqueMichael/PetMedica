@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
         crossorigin="anonymous">
     <link rel="stylesheet" href="css/petmedic.css">
+    <link rel="stylesheet" href="css/animate.css">
 
     <title>PetMedica</title>
 </head>
@@ -184,7 +185,7 @@
             </div>
             <div class="row mb-5">
                 <div class="col-12">
-                    <div class="card">
+                    <div class="card wow fadeInDown">
                         <div id="card-submenu" class="submenu card-body row">
                             <div class="col col-lg-3">
                                 <div class="dropdown">
@@ -214,7 +215,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row lista-productos">
+            <div class="row lista-productos wow zoomInUp" data-wow-delay=".5s">
                 <!-- ITEM -->
                 <div class="col-lg-4 post" data-target="antibioticos">
                     <div class="card">
@@ -476,6 +477,10 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
+        <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
     <script src="js/petmedic.js"></script>
 </body>
 
