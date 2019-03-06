@@ -224,18 +224,45 @@ $(function () {
             $('#registro').find('.step2').removeClass('show');
         }
     });*/
-    $('#registro').find('.btn-next').on('click', function () {
+    /**
+     * FORMULARIO DE REGISTRO
+     */
+    //STEP 1
+    $('#form-registro-step1').on('click', '.btn-next', function () {
+        $.each($('#form-registro-step1').find('.log-status').find('input'), function () { //resaltar input vacios
+            if ($(this).val() == '') {
+                $(this).closest('.log-status').addClass('wrong-entry');
+            } else {
+                $(this).closest('.log-status').removeClass('wrong-entry');
+            }
+        });
+        if ($('#form-registro-step1').find('.wrong-entry').length <= 0) {
+            //continue register
+            $('#registro').find('.pages').find('li').removeClass('active');
+            $('#registro').find('.pages').find('li').last().addClass('active');
+            $('#registro').find('.step1').css({
+                'margin-left': '-75rem'
+            })
+            $('#registro').find('.step2').addClass('show');
+        }
 
-        $('.log-status').addClass('wrong-entry');
-       $('.alert').fadeIn(500);
-       setTimeout( "$('.alert').fadeOut(1500);",3000 );
-/*
-        $('#registro').find('.pages').find('li').removeClass('active');
-        $('#registro').find('.pages').find('li').last().addClass('active');
-        $('#registro').find('.step1').css({
-            'margin-left': '-75rem'
-        })
-        $('#registro').find('.step2').addClass('show');*/
+        //$('.alert').fadeIn(500);
+        //setTimeout( "$('.alert').fadeOut(1500);",3000 );
+        /*
+         */
+    });
+    //STEP 2
+    $('#form-registro-step2').on('click', '.btn-submit', function () {
+        $.each($('#form-registro-step2').find('.log-status').find('input'), function () { //resaltar input vacios
+            if ($(this).val() == '') {
+                $(this).closest('.log-status').addClass('wrong-entry');
+            } else {
+                $(this).closest('.log-status').removeClass('wrong-entry');
+            }
+        });
+        if ($('#form-registro-step2').find('.wrong-entry').length <= 0) {
+            alert('enviando datos...')
+        }
     });
 
     //SLIDER CONTROL PRODUCTOS DESTACADOS
@@ -285,6 +312,27 @@ $(function () {
     $('#video-modal').on('hide.bs.modal', function (e) {
         $("#video").attr('src', $videoSrc);
     })
+
+    /**
+     * EFECTO RIPPLES BUTTON
+     */
+
+    var $ripples = $('.ripples');
+    $ripples.on('click.Ripples', function (e) {
+        var $this = $(this);
+        var $offset = $this.parent().offset();
+        var $circle = $this.find('.ripplesCircle');
+        var x = e.pageX - $offset.left;
+        var y = e.pageY - $offset.top;
+        $circle.css({
+            top: y + 'px',
+            left: x + 'px'
+        });
+        $this.addClass('is-active');
+    });
+    $ripples.on('animationend webkitAnimationEnd mozAnimationEnd oanimationend MSAnimationEnd', function (e) {
+        $(this).removeClass('is-active');
+    });
 
 
     /*
