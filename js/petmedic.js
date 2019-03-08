@@ -281,6 +281,22 @@ $(function () {
         toggleSliderControls($('#productos-destacados'));
         return false;
     });
+    //SLIDER CONTROL NOTICIAS
+    $('#noticias').carousel({
+        wrap: false,
+        interval: 5000
+    });
+    // Control buttons
+    $('#noticias .next').click(function () {
+        $('#noticias').carousel('next');
+        toggleSliderControls($('#noticias'));
+        return false;
+    });
+    $('#noticias .prev').click(function () {
+        $('#noticias').carousel('prev');
+        toggleSliderControls($('#noticias'));
+        return false;
+    });
     //SLIDER CONTROL  PRODUCTOS NUEVOS   
     $('#nuevos-productos').carousel({
         wrap: false,
