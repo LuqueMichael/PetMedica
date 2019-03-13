@@ -11,6 +11,26 @@ body {
     overflow-x: hidden;
 }
 
+/* GENERAL ANIMATION FADE IN */
+.overlay-white{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;    
+    z-index: 0;
+    background: #fff;
+    top: 0rem;
+    left: 0;
+    animation: fadeInOverlayWhite;
+    animation-duration: 1s;
+    transition: ease .5s all;
+}
+@keyframes fadeInOverlayWhite{
+    0% {opacity: 1; z-index: 1000;}
+    100% {opacity: 0;z-index: 0;}
+}
+
+
 .btn{ position: relative }
 /*.btn:hover { color: #fff; }*/
 
@@ -35,6 +55,9 @@ body {
     color: #fff;
     font-family: 'helvetica-light';
     border-radius: 0;
+}
+.btn-black:hover{
+    color: rgb(228, 228, 228);
 }
 
 .btn.btn-line {
@@ -2329,6 +2352,7 @@ i.chev-r {
     margin-bottom: 140px;
     position: relative;
     z-index: 2;
+    overflow: hidden;
 }
 
 #registro {
