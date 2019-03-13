@@ -116,14 +116,14 @@ $(function () {
     });
 
     //FILTER NAV
-    $("#nav-lvl-1").find('a').on("mouseover", function () {
+    /*$("#nav-lvl-1").find('a').on("mouseover", function () {
         //set active item
         $("#nav-lvl-1").find('a').removeClass('active');
         $(this).addClass('active');
         var value = $(this).attr('data-target');
         /*$('#nav-lvl-1').find('a').parent().removeClass('active');
         $(this).addClass('active');*/
-        if (value == 'todo') {
+       /* if (value == 'todo') {
             $("#nav-lvl-2").find('a').parent().removeClass('hide');
             $("#nav-lvl-3").find('a').parent().removeClass('hide');
         } else {
@@ -145,7 +145,7 @@ $(function () {
         var value = $(this).attr('data-target');
         /*$('#nav-lvl-2').find('a').parent().removeClass('active');
         $(this).addClass('active');*/
-        if (value == 'todo') {
+        /*if (value == 'todo') {
             $("#nav-lvl-2").find('a').parent().removeClass('hide');
             $("#nav-lvl-3").find('a').parent().removeClass('hide');
         } else {
@@ -158,15 +158,15 @@ $(function () {
                 }
             });
         }
-    });
+    });*/
     //Dividir en caso sean demasiado (>14) items
-    if ($("#nav-lvl-3").find('li').length > 14) {
+    /*if ($("#nav-lvl-3").find('li').length > 14) {
         var $items = $("#nav-lvl-3").find('li');
         for (var indx = 14; indx <= $items.length; indx++) {
             console.log($items[indx]);
             $($items[indx]).appendTo('#nav-lvl-3_2');
         }
-    }
+    }*/
 
     //SMOOOTH SCROLL
     $('.nav-link').click(function (e) {
@@ -252,7 +252,7 @@ $(function () {
          */
     });
     //STEP 2
-    $('#form-registro-step2').on('click', '.btn-submit', function () {
+    /*$('#form-registro-step2').on('click', '.btn-submit', function () {
         $.each($('#form-registro-step2').find('.log-status').find('input'), function () { //resaltar input vacios
             if ($(this).val() == '') {
                 $(this).closest('.log-status').addClass('wrong-entry');
@@ -264,7 +264,7 @@ $(function () {
             alert('enviando datos...')
         }
     });
-
+*/
     //SLIDER CONTROL PRODUCTOS DESTACADOS
     $('#productos-destacados').carousel({
         wrap: false,
