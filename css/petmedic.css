@@ -223,7 +223,7 @@ body {
 }
 
 /* animations items */
-#main.home .lista-productos .card {
+/*#main.home .lista-productos .card {
     opacity: 0;
     transform: translateY(-30rem);
     transition: ease-in-out all .5s;
@@ -232,7 +232,7 @@ body {
 #main.home .lista-productos .carousel-item.active .card {
     opacity: 1;
     transform: translateY(0);
-}
+}*/
 
 #main .lista-productos .card:hover .info img {
     transform: scale(.85);
