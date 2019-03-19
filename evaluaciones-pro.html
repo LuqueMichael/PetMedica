@@ -9,6 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
         crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="css/petmedic.css">
 
     <title>PetMedica</title>
@@ -42,7 +43,7 @@
     <nav id="navbar-pro" class="fixed-top">
         <div class="container">
             <div class="row d-flex justify-content-end">
-                <div class="col-5 d-flex justify-content-end p-0">
+                <div class="col-12 col-lg-5 d-flex justify-content-end p-0 rp-0">
                     <ul class="d-flex align-items-center">
                         <li class="nav-user"><img class="pr-2" src="img/icon-user.png" alt=""> Umberto Calderón</li>
                         <li><a href="index.html">
@@ -70,8 +71,8 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-support">
-                <ul class="navbar-nav">
+            <div class="collapse navbar-collapse " id="navbar-support">
+                <ul class="navbar-nav d-flex ml-auto">
                     <li class="nav-item">
                         <a class="nav-link active" href="investigaciones-pro.html">Investigaciones</a>
                     </li>
@@ -96,7 +97,7 @@
 
     <section id="main" class="pro">
             <div class="overlay-white"></div>
-        <div class="container p-0">
+        <div class="container p-0 rp-0">
             <div class="row">
                 <div class="col-12">
                     <h1 class="title">Evaluaciones de Campo</h1>
@@ -106,7 +107,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div id="card-submenu" class="submenu card-body row">
-                            <div class="col col-lg-3">
+                            <div class="col-8 col-lg-3">
                                 <div class="dropdown">
                                     <button class="btn btn-drop dropdown-toggle" type="button" id="dropdownMenuButton"
                                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -119,6 +120,7 @@
                                 </div>
                             </div>
                             <div class="col col-lg-9">
+                                    <button class="btn btn-white r-menu float-right"><i class="fas fa-bars"></i></button>                               
                                 <ul class="nav mt-2">
                                     <li class="nav-item"><a class="nav-link active" href="#" data-target="todo">Todos</a></li>
                                     <li class="nav-item"><a class="nav-link" href="#" data-target="antibioticos">Antibióticos</a></li>
@@ -137,8 +139,8 @@
                 <article class="post col-lg-12" data-target="antibioticos">
                     <div class="card">
                         <div class="card-body row">
-                            <div class="thumb col-4 offset-lg-1"><img src="img/products/product-img.png" alt=""></div>
-                            <div class="description col-6">
+                            <div class="thumb col-12 col-lg-4 offset-lg-1"><img src="img/products/product-img.png" alt=""></div>
+                            <div class="description col-12 col-lg-6">
                                 <header>
                                     <h1>Petonic<span>®</span>&nbsp; Recuperation</h1>
                                     <h4>Solución Oral</h4>
@@ -161,8 +163,8 @@
                 <article class="post col-lg-12" data-target="suplementos">
                     <div class="card">
                         <div class="card-body row">
-                            <div class="thumb col-4 offset-lg-1"><img src="img/products/product-img.png" alt=""></div>
-                            <div class="description col-6">
+                            <div class="thumb col-12 col-lg-4 offset-lg-1"><img src="img/products/product-img.png" alt=""></div>
+                            <div class="description col-12 col-lg-4">
                                 <header>
                                     <h1>Petonic<span>®</span>&nbsp; Recuperation 2</h1>
                                     <h4>Solución Oral</h4>
@@ -185,8 +187,8 @@
                 <article class="post col-lg-12" data-target="antiparasitarios">
                     <div class="card">
                         <div class="card-body row">
-                            <div class="thumb col-4 offset-lg-1"><img src="img/products/product-img.png" alt=""></div>
-                            <div class="description col-6">
+                            <div class="thumb col-12 col-lg-4 offset-lg-1"><img src="img/products/product-img.png" alt=""></div>
+                            <div class="description col-12 col-lg-4">
                                 <header>
                                     <h1>Petonic<span>®</span>&nbsp; Recuperation 3</h1>
                                     <h4>Solución Oral</h4>
@@ -209,8 +211,8 @@
                 <article class="post col-lg-12" data-target="antiinflamatorios">
                     <div class="card">
                         <div class="card-body row">
-                            <div class="thumb col-4 offset-lg-1"><img src="img/products/product-img.png" alt=""></div>
-                            <div class="description col-6">
+                            <div class="thumb col-12 col-lg-4 offset-lg-1"><img src="img/products/product-img.png" alt=""></div>
+                            <div class="description col-12 col-lg-4">
                                 <header>
                                     <h1>Petonic<span>®</span>&nbsp; Recuperation 4</h1>
                                     <h4>Solución Oral</h4>
@@ -313,6 +315,7 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
+        <script src="js/responsive.js"></script>
     <script src="js/petmedic.js"></script>
 </body>
 

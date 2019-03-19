@@ -9,6 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
         crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="css/petmedic.css">
     <link rel="stylesheet" href="css/animate.css">
 
@@ -18,46 +19,46 @@
 <body>
     <!-- NAVBAR PRINCIPAL -->
     <nav id="navbar-principal" class="navbar navbar-expand-lg navbar-light bg-light large fixed-top">
-        <div class="container">
-            <a class="navbar-logo" href="#"><img class="logo" src="img/logo-PNG.png" alt=""></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-support"
-                aria-controls="navbar-support" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse d-flex justify-content-end" id="navbar-support">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#main">Fortaleciendo Vínculos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a data-type="submenu-productos" class="nav-link" href="#">Productos</a>
-
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="distribuidores.html">Distribuidores</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contactenos.html">Contáctenos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a data-type="submenu-petmedicapro" class="nav-link" href="#">Petmedica PRO</a>
-                    </li>
-                    <li class="nav-item">
-                        <div id="icon-agrovet"></div>
-                    </li>
-                    <li class="nav-item">
-                        <div id="icon-facebook"></div>
-                    </li>
-                    <li class="nav-item">
-                        <div id="icon-youtube"></div>
-                    </li>
-                    <li class="nav-item">
-                        <div id="icon-ingles"></div>
-                    </li>
+            <div class="container">
+                <a class="navbar-logo" href="#"><img class="logo" src="img/logo-PNG.png" alt=""></a>
+                <button class="navbar-toggler" style="right:1rem;" type="button" data-toggle="collapse" data-target="#navbar-support"
+                    aria-controls="navbar-support" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="collapse navbar-collapse " id="navbar-support">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#main">Fortaleciendo Vínculos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a data-type="submenu-productos" class="nav-link" href="productos.html">Productos</a>
+    
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="distribuidores.html">Distribuidores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contactenos.html">Contáctenos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a data-type="submenu-petmedicapro" class="nav-link" href="#">Petmedica PRO</a>
+                        </li>
+                        <li class="nav-item">
+                            <div id="icon-agrovet"></div>
+                        </li>
+                        <li class="nav-item">
+                            <div id="icon-facebook"></div>
+                        </li>
+                        <li class="nav-item">
+                            <div id="icon-youtube"></div>
+                        </li>
+                        <li class="nav-item">
+                            <div id="icon-ingles"></div>
+                        </li>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
     <div id="submenu-productos-contenedor">
         <div class="container">
@@ -178,7 +179,7 @@
 
     <section id="main">
             <div class="overlay-white"></div>
-        <div class="container p-0">
+        <div class="container p-0 rp-0">
             <div class="row">
                 <div class="col-12">
                     <h1 class="title">Productos</h1>
@@ -188,7 +189,7 @@
                 <div class="col-12">
                     <div class="card wow fadeInDown">
                         <div id="card-submenu" class="submenu card-body row">
-                            <div class="col col-lg-3">
+                            <div class="col col-8 col-lg-3">
                                 <div class="dropdown">
                                     <button class="btn btn-drop dropdown-toggle" type="button" id="dropdownMenuButton"
                                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -201,6 +202,7 @@
                                 </div>
                             </div>
                             <div class="col col-lg-9">
+                                    <button class="btn btn-white r-menu float-right"><i class="fas fa-bars"></i></button>                               
                                 <ul class="nav mt-2">
                                     <li class="nav-item"><a class="nav-link active" href="#" data-target="todo">Todos</a></li>
                                     <li class="nav-item"><a class="nav-link" href="#" data-target="antibioticos">Antibióticos</a></li>
@@ -482,7 +484,9 @@
     <script>
         new WOW().init();
     </script>
+    
     <script src="js/petmedic.js"></script>
+    <script src="js/responsive.js"></script>
 </body>
 
 </html>

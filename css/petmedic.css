@@ -21,7 +21,7 @@ body{overflow-x:hidden;}
 .text-blue{color:#009bdd!important;}
 .text-yellow{color:#826d4d!important;}
 .card{border-radius:0;color:#e9e8e9;}
-#navbar-support{     padding-left: 142px; }
+/*#navbar-support{     padding-left: 142px; }*/
 @media (min-width: 1200px) {
 .container{max-width:1150px;}
 }
@@ -120,7 +120,7 @@ margin-top:-7px;}
 .social.wsp{background-image:url(../img/icon-wsp.png);}
 .social.wsp:hover{background-image:url(../img/icon-wsp-h.png);}
 #main.producto-detalle .submenu .dropdown-menu{width:12.7rem!important;}
-#main.producto-detalle .submenu button.btn.btn-buy{font-family:'helvetica-roman';background:#826d4d;height:68px;border-radius:0;width:12.7rem;position:absolute;top:-19px;left:-20px;color:#fff;display:flex;align-items:center;justify-content:center;z-index:999;}
+#main.producto-detalle .submenu button.btn.btn-buy{font-family:'helvetica-roman';background:#826d4d;height:68px;border-radius:0;width:13.7rem;position:absolute;top:-19px;left:-20px;color:#fff;display:flex;align-items:center;justify-content:center;z-index:999;}
 #main.producto-detalle .social-share{position:absolute;top:0;right:-80px;}
 #main.producto-detalle .social-share ul{list-style-type:none;}
 #main.producto-detalle .social-share ul li{margin-bottom:40px;}
@@ -369,7 +369,7 @@ top:3rem;margin-top:30px;opacity:1!important;z-index:1020!important;transition:e
 #contactenos .menu h1{font-family:'helvetica-bold';font-size:40px;color:#333;margin-bottom:30px;}
 #contactenos .menu ul{padding:0;list-style-type:none;}
 #contactenos .menu ul li{font-family:'helvetica-roman';font-size:14px;color:#868686;margin-left:4px;margin-bottom:15px;}
-#contactenos .mapa{padding-top:2.8rem;}
+#contactenos .mapa{padding-top:2.8rem;overflow: hidden; margin-bottom: 1rem;}
 /*#contactenos .mapa img { width: 95%;}*/
 #contactenos .icon_direc{list-style-image:url(../img/icon-contact-direc.png);list-style-position:inside;}
 #contactenos .icon_direc .text{margin-left:10px;}
@@ -414,7 +414,7 @@ i.chev-r{font-style:normal;font-family:monospace;font-weight:700;top:-1px;right:
 #distribuidores{margin-top:105px;padding-top:60px;padding-bottom:110px;position:relative;z-index:9;}
 #distribuidores .fieldset{font-family:helvetica-roman;color:#333;}
 #distribuidores h1{font-family:'helvetica-bold';font-size:36px;color:#333;margin-bottom:30px;}
-#distribuidores .mapa{margin-bottom:34px;}
+#distribuidores .mapa{margin-bottom:34px;overflow: hidden;}
 #distribuidores form label{font-family:'helvetica-bold';font-size:16px;color:#55575b;}
 #distribuidores form select{height:40px;border:1px solid #d8d8d8;border-top:1px solid #ececec;border-radius:.1px;color:#55575b;-webkit-appearance:none;-moz-appearance:none;appearance:none;/* Some browsers will not display the caret when using calc, so we put the fallback first */
 background:url(../img/form-select-arrow.png) #fff no-repeat 98% 10px!important;/* Better placement regardless of input width */
@@ -681,7 +681,31 @@ overflow:hidden;background-position:center center;background-repeat:no-repeat;ba
     #main .widget { padding-top: 30px !important;}
     #nuevos-productos .carousel-item,#noticias .carousel-item{ padding-left: 30px; }
     #navbar-support{     padding-left: 0; padding-top: 3vh;}
-    #navbar-support .navbar-nav{background: #fff;top: 0rem; position: relative; padding: 15px; height: 100vh;}
-    
+    #navbar-support .navbar-nav{background: #fff;top: 0rem; position: relative; padding: 15px; height: 100vh;}    
     #navbar-principal ul li.nav-item{margin:0 !important; padding:5px 0;    border-bottom: 1px solid #e2e2e2;}
+    .rp-0 {padding: 0 15px !important;}
+    .rm-0 {margin: 0 !important;}
+    #card-submenu .nav {        
+        position: absolute;
+        background: #fff;
+        top: 2rem;
+        right: 0;
+        border: 1px solid #dfdfdf;
+        padding: 15px 20px 15px 0;
+    }
+    #main ul.nav li.nav-item {   margin-bottom: 4px;}
+    #contactenos .btn-submit { margin-left: 50px; }
+    .fix-width {
+        width: initial;
+        margin-left: -15px;
+    }
+    .post .thumb,.card .thumb { text-align: center;}
+    #iniciar-sesion .first-col, #registro .first-col{padding: 15px; height: auto;}
+    #iniciar-sesion .btn-line{ margin: 0;width: 100%}
+    #main ul.nav li.nav-item {padding-left: initial;}
+    #main.producto-detalle .submenu button.btn.btn-buy{position: inherit; width: 100%; margin-top: 1rem; }
+    #registro .fix-center {padding-left: 15px; }
+    #registro {padding-bottom: 10rem;    }
+    #registro .btn-submit{    margin: 0;     width: 100%;    margin-right: 15px;}
+    #registro .second-col {      padding: 0 !important;     margin: 0 !important;    }
 }
