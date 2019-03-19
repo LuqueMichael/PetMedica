@@ -21,7 +21,7 @@ body{overflow-x:hidden;}
 .text-blue{color:#009bdd!important;}
 .text-yellow{color:#826d4d!important;}
 .card{border-radius:0;color:#e9e8e9;}
-#navbar-support{     padding-left: 22rem; }
+#navbar-support{     padding-left: 9rem; }
 @media (min-width: 1200px) {
 .container{max-width:1150px;}
 }
